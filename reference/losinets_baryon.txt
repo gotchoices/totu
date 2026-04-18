@@ -1,0 +1,804 @@
+       Baryon Magnetic Moments in a Two-Zone
+                Kelvin­Voigt Vortex Model
+
+                                     Dmitry Losinets
+
+                                        March 2026
+
+                                                        Abstract
+            This work develops a self-consistent extension of the Kelvin­Voigt (K­V) me-
+        chanical analogy for Maxwell's equations derived in [6] to the description of the
+        magnetic moments of baryons. Each nucleon is modelled as a single Hill-type vor-
+        tex comprising a compact inner zone (core, radius rc) and an extended outer zone
+        (mantle, outer radius rm), whose parameters are fixed by electron-scattering data
+        on the charge distribution. Within the K­V framework, the electric charge of a
+        vortex ring is the mass-normalised circulation invariant Q = 0r0; the magnetic
+        moment is derived from the peripheral velocity of the vortex core. The equal-charge
+        condition yields a parameter-free relation between the magnetic moment ratio and
+        the geometric size ratio of the two zones, in quantitative agreement with exper-
+        iment. The model is extended to the hyperon sector: a falsifiable prediction is
+        formulated for the  magnetic form factor, the  triplet is shown to require inde-
+        pendent charge-distribution data, and the  doublet is found to be incompatible
+        with the equal-charge ansatz under the K­V sign convention; in contrast to the 
+        case, where the failure is quantitative, the  system admits no physical solution at
+        all. Concrete proposals for experimental verification are developed. The approach
+        is phenomenological and does not claim to be fundamental, but possesses significant
+        potential for educational applications.
+
+1 Introduction
+
+Experimental studies of electron scattering on nucleons [1, 2], including the pioneering
+work of Hofstadter and the review by Schopper [3], have revealed a complex internal
+structure of the proton and neutron, indicating the presence of a compact core ("kernel")
+and an extended envelope ("mantle") [4]. The standard interpretation of these data relies
+on the quark model.
+
+    In this work, we propose an alternative, phenomenological approach, building on the
+Kelvin­Voigt mechanical analogy for Maxwell's equations rigorously derived in [6]. In that
+framework a dilute assembly of compact vortex rings in an incompressible K­V viscoelastic
+medium obeys equations formally identical to Maxwell's equations; the electric charge is
+identified with the mass-normalised circulation invariant Q = 0r0. A key development
+presented here is the self-consistent extension of this framework from the description of
+macroscopic electromagnetic fields to the modelling of intrinsic particle properties--in
+particular, the magnetic moments of nucleons. The aim of the work is to construct an
+intuitively understandable and mathematically self-consistent model that can serve as a
+bridge between classical and quantum concepts in the educational process.
+
+                                                        1
+2 Theoretical Basis of the Model
+
+2.1 Mathematical Framework
+
+The basis of the model is the K­V mechanical analogy of [6], in which the quantum
+vacuum is treated as a Kelvin­Voigt viscoelastic medium supporting compact, quantised
+vortex rings [7]. The two central results of [6] used here are:
+
+· Electric charge of a vortex ring is the mass-normalised circulation invariant
+
+                                       Q = 0 r0 ,                                    (1)
+
+where 0 is the medium density, r0 is the vortex core radius, and  is the circulation,
+conserved by Kelvin's theorem. For a compact toroidal vortex whose core rotates
+with angular velocity , the circulation around the core is  = 2r02 , so that
+
+                            Q       =  20 r03   =  3  0  V  ,                        (2)
+                                                   2
+
+where V    4  r03  is  the  vortex  core  volume   and   the   numerical  prefactor  depends
+           3
+on the exact vortex geometry. Equation (2) shows that the K­V charge is propor-
+
+tional to the product of medium density, vortex volume, and angular velocity--the
+
+dimensional structure used throughout this paper.
+
+· Magnetic moment. The magnetic moment of a current loop of area A carrying
+
+current I is µ = IA. In the K­V analogy, the charge of a vortex ring is carried by
+
+fluid parcels in the core that rotate with angular velocity . For a compact torus
+
+(ring  r0), each parcel completes an orbit of radius ring at this same frequency
+
+/(2), so the "current" is I = Q /(2) and the enclosed area is A = 2ring. For
+
+ring  r0:
+
+                                       µ = 0 V (r0)2,                                (3)
+
+where r0 is the peripheral velocity at the vortex core boundary. This expression
+
+highlights the unified mechanism generating charge and magnetic moment through
+vortex rotation: the charge scales with  (eq. (2)), the magnetic moment with 2r02
+(eq. (3)).
+
+Note on sign convention. Equation (3) gives the magnitude of the magnetic moment.
+The sign of µ along the nucleon spin axis is determined by the handedness of the
+circulation: a vortex with circulation  > 0 (counter-clockwise when viewed from
+the +z direction) contributes a positive µz, while reversing the circulation (  -)
+reverses the sign of µz. The signed formula is therefore
+
+                            µ = sign() · 0 V (r0)2,                                  (4)
+
+where  = ||/(2r02) > 0 by definition. This sign convention underlies the additive
+rules µp = µc + µm (both zones co-rotating) and µn = -µc + µm (core zone reversed)
+used throughout Section 3.1.
+
+Note on approximation order. Equations (2) and (3) treat each zone as a uniformly
+rotating body characterised by a single representative angular velocity (c or m)
+and the corresponding outer radius. For a realistic vortex with a smooth circula-
+tion profile, corrections to this uniform-rotation approximation are of relative order
+rc/rm  0.19. The uncertainty of the geometric ratio rm/rc from Hofstadter-era
+
+                                          2
+charge-distribution data is (rm/rc)/(rm/rc)  23% (eq. (12)), which exceeds the
+approximation error. The leading-order uniform-rotation estimate is therefore con-
+sistent with the precision of the available experimental input, and no higher-order
+correction is warranted.
+
+Note on dimensions. In K­V model units, formula (3) has dimensions of energy:
+
+µKV = IKV · A = [kg s-2] · [m2] = kg m2 s-2 = J,
+
+IKV  A
+
+where the K­V current unit kg s-2 is taken from the correspondence table of [6]
+(row "Current I"). Applying the conversion ISI = R IKV (where R = KV = 0/G,
+the Kelvin­Voigt relaxation time, also from that table) gives
+
+µSI = ISI · A = R IKV · A = R µKV, [R µKV] = s · J = kg m2 s-1  A m2,
+
+where the last step follows from the SI relation 1 A = 1 kg m2 s-3 V-1 within the
+K­V electromagnetic correspondence established in [6]. Since R is the same con-
+stant for all zones of the same nucleon, it cancels identically in all dimensionless
+ratios. Equation (3) is therefore used exclusively to derive ratios such as µc/µm;
+absolute values in nuclear magnetons µN are taken directly from experiment via the
+system (7).
+
+2.2 Key Assumptions of the Model
+
+The two-zone structure adopted here is directly motivated by the K­V framework itself.
+The Hill spherical vortex--the prototype solution employed in [6]--comprises two hydro-
+dynamically distinct regions: an inner core of non-zero vorticity  =  × u = 0 (the
+rotational domain, characteristic radius rc), and an outer irrotational region ( = 0) that
+nonetheless carries circulation and stores K­V elastic energy (the mantle, outer radius
+rm). The nucleon is modelled as a single such vortex; its two zones map directly onto the
+experimentally observed two-scale charge distribution.
+
+   1. The nucleon is described by a single Hill-type vortex. Its inner zone (core, radius
+       rc  0.25 fm) and outer zone (mantle, outer radius rm  1.3 fm) carry the charge
+       and magnetic-moment contributions Qc, µc and Qm, µm respectively. This two-scale
+       structure is clearly visible in the charge distribution data obtained from electron
+       scattering experiments (see Fig. 2).
+
+   2. The contributions from each zone are computed from eqs. (2) and (4) as leading-
+       order estimates, treating each zone as a uniformly rotating body with representative
+       angular velocity c or m. The approximation is justified to the precision of the
+       available data (see the approximation note in Sec. 2.1).
+
+   3. The proton­neutron transition corresponds to a reversal of the core-zone rotation
+       (c  -c, equivalently c  -c) while the mantle zone remains unchanged.
+
+   4. The geometric parameters rc and rm are fixed by experimental charge-distribution
+       data [4, 5], which ensures the self-consistency of the model.
+
+3
+    Note on stability. The Hill spherical vortex is a known steady solution of the incom-
+
+pressible Euler equations [7]; shape-deformation modes are stabilised by the K­V elastic
+restoring force at the shear modulus scale G  2/rc2 derived in [6]. The stability of the
+two-zone circulation profile against redistribution of circulation between core and mantle
+
+is not addressed analytically here and remains an open problem for future work.
+
+    Note on spin quantisation. The emergence of half-integer spin J = /2 requires quanti-
+
+sation of the vortex angular momentum. Within the superfluid analogue the discretisation
+
+ = nh/mp (Onsager­Feynman, see [6, 7]) discretises the charge; the corresponding quan-
+tisation of the angular momentum L = 0  r02 in units of /2 remains an open problem,
+deferred to future work.
+
+   Proton                         Neutron
+
+      +  e                           +  e
+         2                              2
+
+                           
+
+      +  e                 z^        -  e
+         2                              2
+
+            rc                             rc
+                   rm                             rm
+
+Figure 1: Cross-sectional schematic of the two-zone nucleon model (view along the sym-
+metry axis; not to scale). Red disk: core zone (radius rc  0.25 fm); blue annulus: mantle
+zone (outer radius rm  1.3 fm). Both zones belong to a single Hill-type vortex. Curved
+arrows indicate the rotation direction of each zone. Proton: both zones rotate in the same
+sense, each carrying charge +e/2. Neutron: the core-zone rotation is reversed (Qc = -e/2,
+Qm = +e/2), giving zero net charge and magnetic moment µn = -µc + µm = -1.91 µN .
+
+   c                   m          c                   m
+
+   m                   m          m
+
+                                                    m
+
+                               c
+
+                                                       fm
+
+c                      fm
+
+Figure 2: Experimental data on the electric charge distribution in the proton (left) and
+neutron (right). The vertical axis shows the normalised charge density; the horizontal
+axis shows the radial distance from the centre.
+
+                           4
+3 Model Parameters, Consistency, and Hyperon Ex-
+    tensions
+
+3.1 System of Equations for Magnetic Moments
+
+The proton carries total charge +e; the neutron carries zero net charge. Within the K­
+V framework the proton­neutron transition is a reversal of the core-zone rotation only,
+leaving the mantle zone unchanged. These two constraints together with the single-zone-
+reversal hypothesis yield the linear system
+
+                 Qc + Qm = e (proton), -Qc + Qm = 0 (neutron),                                          (5)
+
+with unique solution |Qc| = |Qm| = e/2: each zone carries exactly half the elementary
+charge. Using the K­V charge formula (2), the equal-charge condition reads:
+
+                   |Qc|   =  |0  rc  c|  =  e  ,     |Qm|  =    |0 rm  m|     =   e  ,                  (6)
+                                            2                                     2
+
+i.e. rcc = rmm (at fixed 0). The signs differ between proton and neutron: in the proton
+
+both zones rotate in the same sense (Qc > 0, Qm > 0); in the neutron they are opposite
+(Qc < 0, Qm > 0), giving net charge zero.
+
+    Within the K­V framework this sign assignment acquires a natural geometric inter-
+
+pretation:  the  isospin  quantum  number   (I3   =  +  1  for  the  proton,  I3  =     -  1  for  the  neutron)
+                                                        2                                  2
+maps directly onto the sign of the core circulation c, while the mantle circulation m > 0
+
+remains unchanged. This identification provides a mechanical picture of isospin within
+
+the vortex model.
+
+The additive rules µp = µc +µm (proton, both circulations aligned) and µn = -µc +µm
+
+(neutron, core reversed), combined with the experimental values, give the system:
+
+                                     µc + µm = 2.79 µN ,                                                (7)
+
+                                     -µc + µm = -1.91 µN ,
+
+The unique solution is µc = 2.35 µN and µm = 0.44 µN . Table 1 summarises the zone
+parameters.
+
+            Table 1: Calculated parameters of the two zones within the model.
+
+                 Component           Charge (e)            µ/µN Radius (fm)
+
+                 Core              +0.5 (p), -0.5 (n) 2.35                    0.25
+
+                 Mantle                  +0.5                   0.44          1.3
+
+The neutron magnetic moment evaluates to
+
+                          µn = -µc + µm = -2.35 + 0.44 = -1.91 µN ,                                     (8)
+
+reproducing the experimental value including sign.
+
+3.2 Consistency Check
+
+The selection criterion is agreement with the experimental ratio of radii rm/rc  5.2 [4, 5].
+
+From the magnetic moment formula (3), µ  0 V 2r02  0 r05 2. Using  = 2r02 to
+
+eliminate , this becomes
+
+                                         µ  0 2 r0 .                                                    (9)
+                                                   42
+
+                                                  5
+Therefore                              µc      c2    rc
+                                       µm      m2    rm
+                                           =             .                      (10)
+
+Applying the equal-charge condition rcc = rmm, i.e. c/m = rm/rc:
+
+                                 µc =     rm   2     rc  = rm .                 (11)
+
+                                 µm       rc    ·    rm rc
+
+The model therefore predicts that the ratio of magnetic moments equals the ratio of vortex
+
+radii: µc/µm = rm/rc  5.2.
+    Note on the range of validity of eq. (11). Equation (10) involves c2 and 2m (squares),
+
+so the derivation is insensitive to the relative signs of the circulations. Consequently,
+
+eq. (11) holds as a magnitude relation |µc|/|µm| = rm/rc regardless of whether the two
+zones co-rotate or counter-rotate. This extends its applicability to the  and  sectors
+
+(Secs. 3.3­3.5), where the equal-charge condition for a neutral baryon forces opposite-sign
+
+circulations.
+
+    The predicted value µc/µm = 2.35/0.44  5.34 is in agreement with the geometric
+ratio rm/rc = 5.2 ± 1.2 (see below), confirming the extension of the K­V framework to
+magnetic moments.
+
+    Note on uncertainties. The magnetic moment ratio µc/µm = 5.34 is obtained from
+µp = 2.7928 µN and µn = -1.9130 µN , which are known to better than 10-4 µN ; its
+uncertainty is negligible. The geometric ratio rm/rc, by contrast, is extracted from the
+phenomenological two-component fit to Hofstadter-era electron-scattering data [4, 5]; the
+
+characteristic scales rc  0.25 fm and rm  1.3 fm carry uncertainties of roughly rc 
+0.05 fm and rm  0.15 fm (estimated from the scatter across analyses). Error propagation
+gives
+
+                rm  rm           rc   2   rm      2         
+
+                  rc         rc  rc    +   rm         5.2 × 0.04 + 0.013  1.2,  (12)
+
+so that rm/rc = 5.2 ± 1.2. The predicted value 5.34 lies within this range, confirming
+consistency, but the comparison is limited by the geometric uncertainty rather than by
+
+the precision of the magnetic moment data.
+
+    The counterintuitive result µc > µm despite rc < rm has a transparent physical inter-
+pretation. The equal-charge condition rcc = rmm forces the smaller vortex to rotate
+faster: c/m = rm/rc  5.2. Since µ  2r0, the gain from elevated circulation out-
+weighs the penalty of reduced size, giving µc  2crc  rm2 /rc > µm  m2 rm. The
+mechanism is analogous to a figure skater pulling their arms inward: reducing the vortex
+
+radius at fixed charge (the hydrodynamic angular impulse r0) accelerates the circulation
+and disproportionately amplifies the magnetic moment.
+
+3.3 Testable Prediction: the  Hyperon
+
+The prediction µc/µm = rm/rc (eq. (11)) acquires new content when applied to the 
+
+hyperon (JP    =  1   +,  S  = -1, µ  = -0.613 µN    [9]).  Because the  is an isospin singlet
+                  2
+(I = 0) with no charged partner, the total magnetic moment provides only a single
+
+constraint on the two zones. Since Q = 0, the equal-charge condition requires opposite-
+sign zone charges: Qc = -Qm with |Qc| = |Qm|. There is a twofold ambiguity in the sign
+
+assignment:
+
+                                               6
+ (A) Qc = -e/2, Qm = +e/2 (core negative, mantle positive): µ = -µc() + µm();
+
+ (B) Qc = +e/2, Qm = -e/2 (core positive, mantle negative): µ = µc() - µm().
+
+The observed µ < 0, combined with µc > µm (which follows from rm > rc via eq. (11)),
+selects assignment (A) uniquely: only -µc + µm < 0, whereas (B) gives µc - µm > 0,
+contradicting experiment. This yields:
+
+      µ = -µc() + µm() = -0.613 µN .                          (13)
+
+The system is under-determined: µc() and µm() cannot be fixed from this equation
+alone. Rather than closing it with an ad hoc assumption, we recognise this under-
+determination as a direct statement about what must be measured.
+
+    The model predicts that two independently accessible quantities must be equal:
+
+                   µc() = rm() .                              (14)
+                   µm() rc()
+
+The left-hand side is accessible from the spatial profile of the  magnetisation distribution,
+encoded in the magnetic Sachs form factor G(M)(Q2) at large Q2; the right-hand side is
+accessible from the charge distribution, encoded in GE()(Q2). These two form factors are
+measured independently in the same e scattering experiment. The  lifetime (c 
+7.89 cm) is sufficient for hyperon-beam or secondary-target configurations, making such
+measurements experimentally accessible at future facilities such as PANDA at FAIR--in
+contrast to the  baryons, for which the lifetime and production cross-section present
+additional experimental challenges (Sec. 3.5). Equation (14) combined with eq. (13) then
+uniquely determines the component moments:
+
+         0.613      µc() =  0.613 x    x  rm() .              (15)
+µm()  =         ,                   ,        rc()
+         x  -  1            x-1
+
+Once x is measured, both component moments are predicted with no free parameters.
+The equality (14) is the non-trivial content of the model: it can fail, and its failure would
+falsify the equal-charge two-zone ansatz for the .
+
+    As a numerical illustration, Table 2 shows the predicted component moments for two
+hypothetical values of x. If the  vortex geometry is similar to the nucleon (x  5.2),
+then µm()  0.145 µN and µc()  0.758 µN ; if the structure is more compact (x  3),
+then µm()  0.307 µN and µc()  0.920 µN . These two scenarios predict qualitatively
+different spatial profiles of the magnetisation density and are distinguishable in principle
+from the Q2-dependence of GM ()(Q2).
+
+Table 2: Predicted -hyperon vortex component moments as a function of the geometric
+
+ratio x = rm()/rc(), using µ = -0.613 µN and eqs. (13)­(15).
+
+         x = rm/rc  µc()/µN µm()/µN
+
+            3.0        0.920           0.307
+
+            4.0        0.817           0.204
+
+5.2 (nucleon-like) 0.758               0.145
+
+            7.0        0.716           0.102
+
+                    7
+3.4 Extension to the  Isospin Triplet
+
+The   baryons   (I  =  1,    JP  =  1  +)  form  an isospin    triplet:  +  (charge  +e),  0  (charge
+                                    2
+0), and - (charge -e). Their precisely measured magnetic moments [9] are µ+ =
+
++2.458 µN and µ- = -1.160 µN .
+
+    Unlike the nucleon isospin doublet (I3 = 1 step), the  triplet spans I3 = 2 from
++ to -. In the K­V ladder picture, each unit step in I3 reverses one component: the
+
+first step (+  0, core reversed) gives charges (-e/2, +e/2) and net zero; the second
+
+step (0  -, mantle reversed) gives charges (-e/2, -e/2) and net -e. Applying this
+
+double-reversal scheme directly to the +/- pair:
+
+       µ+ = µc() + µm() = 2.458 µN ,                 µ- = -µ(c) - µ(m) = -1.160 µN .          (16)
+
+These two equations are inconsistent (2.458 = 1.160), indicating that the equal-charge
+two-zone ansatz of the nucleon sector does not transfer directly to the  triplet. This is
+physically expected: the  contains an s-quark, and the different quark content changes
+both the charge distribution geometry and the internal circulation strengths.
+
+    The inconsistency is itself a meaningful result: it implies that the charge distribution
+radii rc() and rm() are not simply related to those of the nucleon, and that their indepen-
+dent measurement (from e scattering form factors, accessible at future facilities such as
+JLab, HIAF, or PANDA at FAIR) would be required to close the system.
+
+    The degree of inconsistency can be quantified by a sum rule: in the symmetric double-
+reversal scheme the sum µ+ + µ- should vanish identically, whereas experiment gives
+
+                       µ+ + µ- = 2.458 - 1.160 = +1.298 µN = 0.                               (17)
+
+This non-zero residual is a direct measure of the s-quark's effect on the reversal symmetry
+
+of the nucleon sector: it tells us by how much the circulation balance between core and
+mantle differs between + (quark content uus) and - (dds). In K­V terms it implies
+
+that the charge distributions of the two members are not mirror images of each other. A
+direct consequence is that the electric form factors G(E+)(Q2) and GE(-)(Q2) should differ
+not only in sign but in shape--a prediction that is falsifiable at future hyperon scattering
+
+facilities independently of any assumption about rc and rm.
+    Once rm()/rc() is measured for each charge state separately (since the + and -
+
+charge distributions differ in shape, each has its own geometric ratio), the model predicts
+
+the key relation for each member individually:
+
+                                           µc(±)  =  rm(±)  ,                                 (18)
+                                           µm(±)     rc(±)
+
+which provides a non-trivial consistency check of the K­V framework beyond the nucleon
+sector.
+
+3.5 Extension to the  Cascade
+
+The    baryons  (I  =  1  ,  JP  =  1  +,  strangeness  S  =   -2)  form    a  doublet  with  measured
+                       2            2
+moments [9] µ0 = -1.250 µN and µ- = -0.6507 µN .
+
+The  doublet provides a stronger constraint on the framework than the  singlet:
+
+two independent magnetic moment measurements fully determine the system, leaving no
+
+free parameters, whereas for  a single measurement left the system underdetermined and
+
+                                                  8
+the model could only predict a relation between observables. This makes the  sector a
+
+more decisive test--and, as shown below, a decisive failure.
+
+Unlike the nucleon, for which the two-zone charge distribution is directly established by
+
+electron-scattering data [4, 5], no analogous measurement exists for the  baryons: their
+
+short lifetime ( 10-10 s) precludes their use as fixed targets, and the electromagnetic
+
+form factors GE()(Q2) and G(M)(Q2) have not been measured. The two-zone structure and
+the equal-charge condition are therefore not empirically motivated for the  sector; they
+
+constitute an untested assumption when applied here by analogy.
+    Applying the equal-charge ansatz |Qc| = |Qm| with the constraint Qc() + Qm() = 0
+
+(charge of 0) gives Q(c) = +e/2 and Qm() = -e/2: the two zones carry opposite-sign
+
+charges. Unlike the nucleon, where both zones co-rotate (c > 0, m > 0), opposite-
+
+sign charges imply opposite-sign circulations (c > 0, m < 0). Under the K­V sign
+
+convention (eq. (4)), this gives µ(c) > 0 and µm() < 0.
+
+Applying  the  core-reversal  hypothesis  (0    as  the  I3  =  +  1  reference  state,  -  obtained
+                                                                   2
+by core reversal) with these sign constraints:
+
+|µ(c)| - |µm()| = -1.250 µN (0),          -|µc()| - |µ(m)| = -0.6507 µN (-). (19)
+
+Adding these equations gives -2|µ(m)| = -1.901 µN , hence |µ(m)| = 0.950 µN ; subtracting
+gives 2|µc()| = -0.599 µN < 0, which has no physical solution.
+
+    The  magnetic moment data are therefore incompatible with the equal-charge two-
+zone ansatz under the K­V sign convention, analogously to the  triplet (Sec. 3.4). The
+inconsistency is more fundamental than for : there it arose from the triplet structure,
+whereas here the equal-charge condition applied to the neutral member 0 itself forces
+opposite-sign zone circulations that cannot simultaneously accommodate both measured
+moments. Whether a modified two-zone ansatz--with unequal zone charges or a different
+reversal scheme--could fit the  data remains an open question. In K­V terms, two
+structural hypotheses naturally present themselves. First, the two-zone model may be
+insufficient: each strange quark could require an additional circulation scale, so that a
+three-zone structure with radii rc < rint < rm would appear as three distinct form factor
+scales in GE()(Q2). Second, the vortex topology itself may change for S = -2: instead
+of a single Hill vortex, double strangeness may be associated with two linked circulation
+loops, altering the reversal mechanism at a qualitative level. Both scenarios predict that
+the  charge form factor will differ qualitatively--not merely quantitatively--from the
+nucleon, which is directly testable via the Q2-shape of G(E)(Q2) at future facilities such
+as PANDA at FAIR.
+
+3.6 Strangeness as a Structural Probe: A Research Programme
+
+The results of Secs. 3.3­3.5 form a coherent pattern that can be organised into a systematic
+research programme. The equal-charge two-zone ansatz succeeds exactly for S = 0,
+survives (in a single-equation, underdetermined form) for the  (S = -1, I = 0), fails
+quantitatively for the  (S = -1, I = 1), and fails fundamentally for the  (S = -2).
+This hierarchy suggests that each unit of strangeness introduces a structural complication
+that the simplest two-zone equal-charge model cannot accommodate, and that the degree
+of failure itself carries physical information about the internal structure of strange baryons.
+
+    Table 3 summarises the status of the equal-charge ansatz across the baryon octet,
+together with the structural prediction that follows from each outcome.
+
+                                          9
+Table 3: Status of the equal-charge two-zone ansatz across the baryon octet, organised
+
+by strangeness. The sum-rule deviation  is defined as the value that should vanish in a
+
+symmetric reversal scheme. A dash (--) indicates that no reversal partner exists.
+
+S Baryon Ansatz status                                                 Structural prediction
+
+0 p, n                      exact          0 (by construction) Two zones, rm/rc  5.2
+
+-1                underdetermined --                                   µc/µm = rm/rc (eq. (14))
+                                                                       GE(+) = G(E-) in shape
+-1 ±                      fails            +1.298 µN                    3 zones or different topology
+-2 0,-                impossible           no solution
+
+    The sum-rule deviation  = µ+ + µ- = +1.298 µN (eq. (17)) is a quantitative
+diagnostic: it measures the asymmetry between the charge distributions of + (uus) and
+- (dds) that the s-quark introduces. A systematic measurement of the analogous sum
+rule µB + µB¯ across the baryon octet would map the strangeness dependence of vortex-
+structure asymmetry within the K­V picture.
+
+    For the  doublet, the absence of any physical solution is a stronger statement: not
+
+a quantitative mismatch but a qualitative change of regime. This motivates two specific
+experimental targets. First, determine whether G(E)(Q2) exhibits two or more distinct
+form-factor scales (two-zone vs. multi-zone). Second, compare the Q2-slopes of G(E0) and
+G(E-) to test whether their charge distributions are mirror images or differ in shape--a
+test that is independent of any model assumption about the number of zones.
+
+    In this way, the regions where the K­V model fails function as diagnostic tools: each
+inconsistency translates into a concrete, falsifiable prediction about the charge-distribution
+
+geometry of the corresponding baryon, accessible at future hyperon scattering facilities.
+
+4 Discussion of Results and Educational Value
+
+The presented model offers a unified and intuitively understandable description of the key
+experimental facts: charge distribution, anomalous magnetic moments, and baryon sizes.
+The K­V mechanical analogy of [6] provides a firm theoretical footing: the charge formula
+Q = 0r0 is not postulated but derived from the constitutive law of the viscoelastic
+medium and Kelvin's circulation theorem. The magnetic moment formula µ = 0V (r0)2
+is a natural extension, expressing µ through the same microscopic parameters (0, r0, )
+that define the charge. Table 4 compares the model predictions against experiment and
+two established frameworks for the nucleon sector.
+
+4.1 Comparison with Other Phenomenological Models
+
+Several established models describe nucleon magnetic moments, each with distinct strengths.
+
+The non-relativistic quark model (NQM) reproduces µp and µn via constituent quark
+
+spins  (µp  =  4  µu  -  1  µd,  µn  =  4  µd  -  1  µu),  but  takes  the  quark  magnetic  moments  as
+               3         3              3         3
+free parameters and offers no geometrical connection between the charge distribution and
+
+the magnetic moment ratio. The MIT bag model treats quarks as free fields inside
+
+a confining sphere of radius R  1 fm; it predicts anomalous moments approximately
+
+but requires separate treatment of the confinement scale and the magnetic properties,
+
+and does not exhibit a natural two-scale internal structure in the way observed in the
+
+Hofstadter data. The Skyrme model represents the nucleon as a quantised topological
+
+                                                     10
+Table 4: Comparison of nucleon parameters in various models.
+Parameter Experiment Quark Model Vortex (K­V) Model
+
+µp/µN      2.79     2.79      2.79
+µn/µN    -1.91               -1.91
+rm/rc   5.2 ± 1.2  -1.91      5.34
+rc, fm   0.25      n.a.       0.25
+rm, fm    1.3      n.a.
+                   n.a.       1.3
+
+ The non-relativistic quark model predicts magnetic moments from constituent quark spins and does
+
+not define a two-scale radial geometry. The MIT bag model has a single confinement radius R  1 fm
+
+and does not exhibit a compact core­extended mantle structure. Note that for the K­V model µp and
+
+µn are inputs to the system (7), whereas the quark model predicts them from constituent quark
+
+                   moments.
+
+soliton; it correctly predicts the sign of the ratio µp/µn from topological arguments but
+has no direct hydrodynamic interpretation of the charge distribution geometry.
+
+    The K­V two-zone model occupies a complementary niche. Its distinctive feature is the
+parameter-free relation µc/µm = rm/rc (eq. (11)), which connects two independently mea-
+sured quantities--the magnetic moment ratio from spin measurements and the geometric
+ratio from electron scattering--through a single mechanical constraint (the equal-charge
+condition). None of the three models above yields an analogous geometrical prediction.
+The price of this simplicity is a limited scope: in its nucleon sector the model relies on the
+equal-charge condition, whose extension to hyperons requires independent measurement
+of their charge-distribution geometry (see §3.3­3.5), and the K­V framework itself awaits
+independent peer review [6].
+
+    The use of classical hydrodynamic imagery offers a significant advantage for ed-
+ucational applications: the model can be used to create visual aids and simulations,
+helping students form an initial intuitive understanding of hadron structure before moving
+on to the complex mathematical apparatus of QCD. It is important to emphasise that
+the model is phenomenological and does not claim to be fundamental, but serves
+as a convenient tool for describing and systematising experimental data.
+
+5 Development Prospects and Experimental Verifica-
+    tion
+
+To test the model and develop it further, the following experiments are proposed:
+
+   1. Measurement of the magnetisation distribution inside the nucleon. The
+       model predicts different magnetic moment densities in the core and mantle (ratio
+        5.34). This translates into a specific two-scale behaviour of the magnetic Sachs
+       form factor GpM (Q2): a slower fall-off at intermediate Q2 (dominated by the extended
+       mantle, rm  1.3 fm) giving way to a harder component at large Q2 (the compact
+       core, rc  0.25 fm, Q2  10 GeV2). The high-precision recoil-polarisation measure-
+       ments at Jefferson Lab Hall C [11, 12, 13] have established that the ratio GEp /GpM falls
+       linearly with Q2 above 1 GeV2, in clear disagreement with the simple dipole ansatz.
+       This behaviour is precisely what a two-scale internal structure predicts: the mantle
+       (rm  1.3 fm) dominates GpM at moderate Q2, while the compact core (rc  0.25 fm)
+       contributes a harder component visible at Q2  10 GeV2. Re-analysing these data
+
+                                                       11
+within the two-component parameterisation GM p (Q2) = GM (c)(Q2) + GM (m)(Q2) with
+independently fitted core and mantle form factors offers a direct experimental test
+
+of the model's geometric structure.
+
+2. Search for kinematic features in deep-inelastic scattering. One might expect
+   that the transition between scattering on the compact core and the extended mantle
+   could manifest itself in sharper changes in cross-sections compared to predictions of
+   models based on parton distributions.
+
+3. Observation of rotational effects in high-energy collisions. The vortex na-
+
+ture of nucleons might manifest itself in specific particle correlations in the final state
+
+[8].  Strikingly, global   hyperon polarization consistent with      masNcrNos=co7p.i7c­v3o9rGticeaVl
+flow  has already been    measured by the STAR Collaboration in
+
+Au+Au collisions [10]: the observed polarization reaches  1.08%, corresponding to
+
+an estimated angular velocity of the quark­gluon plasma of   1022 s-1, making it
+
+the most rapidly rotating fluid known in nature. Within the present framework, this
+
+observation demonstrates that macroscopic vortex structures form in nuclear matter
+
+under extreme conditions, and motivates a search for connections between the mi-
+
+croscopic vortex structure of individual nucleons and the bulk angular momentum
+
+of the plasma.
+
+4. Extension to other hadrons. Sections 3.3­3.5 develop the model for the , ,
+
+and  hyperons. For the , the predicted relation µc/µm = rm/rc (eq. (14)) offers
+
+a concrete falsifiable test accessible via the magnetic Sachs form factor G(M)(Q2).
+For both  and , the equal-charge ansatz is found inconsistent with the measured
+
+magnetic moments; in the  case this is compounded by the complete absence of
+charge-distribution data, making a measurement of G(E)(Q2) the necessary first step.
+                    1
+Beyond  the  spin-  2  baryons,  testing  whether  mesons  (e.g.  ,  )  admit  an  analogous
+
+two-zone decomposition would probe the universality of the K­V framework across
+
+the hadron spectrum.
+
+6 Conclusion
+
+The Kelvin­Voigt mechanical analogy of [6] has been extended to a self-consistent de-
+scription of nucleon magnetic moments. In the K­V framework the electric charge is the
+circulation invariant Q = 0r0 (eq. (1)), and the magnetic moment is µ = 0V (r0)2
+(eq. (3)), with both quantities expressed through the same microscopic vortex parame-
+ters. The equal-charge condition rcc = rmm yields the key prediction µc/µm = rm/rc
+(eq. (11)). The predicted value 5.34 is consistent with the geometric ratio rm/rc = 5.2±1.2
+(eq. (12)); the comparison is limited by the uncertainty of the 1960s charge-distribution
+data rather than by the precision of the magnetic moment measurements.
+
+    The same geometric relation µc/µm = rm/rc has been extended to the hyperon sector.
+For the  (isospin singlet), it provides a falsifiable prediction (eq. (14)) that connects the 
+magnetic and charge form factors and can be tested at future electron­hyperon scattering
+facilities. For the  isospin triplet, the double-reversal scheme applied to +/- is found
+to be inconsistent with experiment, indicating that the equal-charge ansatz does not
+transfer directly from the nucleon sector, and that an independent measurement of the
+ charge distribution is required. For the  doublet, the equal-charge ansatz applied to
+the neutral member 0 forces opposite-sign zone circulations, leading to a system with
+
+                                                       12
+no physical solution for the zone magnetic moments--an inconsistency analogous to, and
+more fundamental than, the  case. No charge-distribution data exist for the , making
+a measurement of GE()(Q2) at future facilities the necessary prerequisite for any K­V
+prediction in the double-strangeness sector.
+
+    The pattern of outcomes across the baryon octet--exact agreement at S = 0, underde-
+termination at S = -1 (), quantitative failure at S = -1 (), and fundamental impos-
+sibility at S = -2 ()--constitutes in itself a systematic research programme (Sec. 3.6,
+Table 3): each inconsistency translates into a concrete structural prediction about the cor-
+responding baryon, falsifiable through independent measurements of the electromagnetic
+form factors at future hyperon scattering facilities.
+
+    The constructed phenomenological two-zone model offers an intuitive picture of baryon
+internal structure and significant advantages for educational applications. Explicit pro-
+posals for experimental verification are formulated.
+
+References
+
+ [1] Hofstadter, R. (1956). Electron Scattering and Nuclear Structure. Reviews of Modern
+      Physics, 28(3), 214­254.
+
+ [2] Ernst, D. J., et al. (1994). Nucleon form factors from electron-nucleon scattering.
+      Physical Review C, 50(2), 910­922.
+
+ [3] Schopper, H. (1961). Die elektromagnetische Struktur des Protons und Neutrons.
+      Physikalische Blätter, 21(10), 454­462.
+
+ [4] Hofstadter, R., & Herman, R. (1961). Electric and magnetic structure of the proton
+      and neutron. Physical Review Letters, 6(6), 293­296.
+
+ [5] Hand, L. N., Miller, D. G., & Wilson, R. (1963). Electric and magnetic form factors
+      of the nucleon. Reviews of Modern Physics, 35(2), 335­349.
+
+ [6] Losinets, D. S. (2026). Maxwell's Equations from Vortex Mechanics: A Kelvin­Voigt
+      Analogy. Zenodo. https://doi.org/10.5281/zenodo.19135635
+
+ [7] Donnelly, R. J. (1991). Quantized Vortices in Helium II. Cambridge University Press.
+
+ [8] Liang, Z.-T., & Wang, X.-N. (2005). Globally polarized quark-gluon plasma in non-
+      central A+A collisions. Physical Review Letters, 94(10), 102301.
+
+ [9] Workman, R. L., et al. (Particle Data Group) (2022). Review of Particle Physics.
+      Progress of Theoretical and Experimental Physics, 2022, 083C01. https://doi.org/
+      10.1093/ptep/ptac097
+
+[10] STAR Collaboration: Adamczyk, L., et al. (2017). Global  hyperon polarization in
+      nuclear collisions. Nature, 548, 62­65. https://doi.org/10.1038/nature23004
+
+[11] Jones, M. K., et al. (2000). GEp/GMp ratio by polarization transfer in e p  e p. Phys-
+      ical Review Letters, 84(7), 1398­1402. https://doi.org/10.1103/PhysRevLett.
+      84.1398
+
+                                                       13
+[12] Gayou, O., et al. (2002). Measurement of GEp/GMp in e p  e p to Q2 = 5.6 GeV2.
+      Physical Review Letters, 88, 092301. https://doi.org/10.1103/PhysRevLett.88.
+      092301
+
+[13] Puckett, A. J. R., et al. (2010). Recoil polarization measurements of the proton
+      electromagnetic form factor ratio to Q2 = 8.5 GeV2. Physical Review Letters, 104,
+      242301. https://doi.org/10.1103/PhysRevLett.104.242301
+
+                                                       14
+

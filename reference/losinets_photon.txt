@@ -1,0 +1,679 @@
+Vortex Photon Model: Program for Experimental
+                       Verification
+
+                                 Dmitry Losinets
+                                    March 2026
+
+                                               Abstract
+
+    This work investigates a vortex-based model of the photon as an alternative ap-
+proach to quantum electrodynamics (QED), grounded in the formal Kelvin­Voigt
+(K­V) mechanical analogy for Maxwell's equations derived in [1]. While mathemat-
+ically consistent with the Jones formalism for polarization in describing transverse
+far-field components, the model makes distinct, falsifiable predictions: a non-zero
+longitudinal mechanical displacement of vacuum-medium elements in the near field
+of a propagating photon-vortex, detectable at sub-wavelength distances from the
+beam axis. The far-field propagating mode is strictly transverse, as required by
+the Coulomb gauge that the K­V incompressibility condition imposes exactly. The
+article focuses on designing critical experiments to test these predictions, including
+near-field detection of longitudinal field structure and analysis of angular momen-
+tum transfer during photon absorption. Results from these experiments could either
+validate the model or reinforce the standard QED framework.
+
+1 Introduction
+
+Standard quantum electrodynamics (QED) represents one of the most accurate and well-
+verified physical theories, whose predictions have been brilliantly confirmed experimen-
+tally [2, 3]. The mathematical apparatus of QED, based on the concept of gauge fields,
+has no equal in its predictive power [4, 5]. However, its abstract nature and lack of in-
+tuitive mechanical analogies for describing quantum objects such as photons continue to
+stimulate the search for alternative interpretations and models that can bridge the gap
+between mathematical formalism and intuitive understanding [6].
+
+    This work explores the possibility of mechanical description of photons within the
+framework of a vortex model of the quantum vacuum, as systematically presented in
+[1]. The fundamental basis of this approach -- established rigorously in [1] and sum-
+marised for the reader's convenience in Sec. 2.1 below -- is that a dilute assembly of
+compact vortex rings in a Kelvin­Voigt (K­V) viscoelastic medium obeys equations for-
+mally identical to Maxwell's equations. Specifically, the K­V constitutive law combined
+with incompressibility yields the correspondence between the vector potential A and the
+solenoidal velocity field u of the medium (eq. (6)):
+
+                A = R u,  R    KV  =  0 ,                                               (1)
+                                      G
+
+where 0 is the dynamic viscosity of the medium and G  02/r02 is the effective
+shear modulus arising from the Tkachenko mechanism of vortex-ring collective elasticity
+
+                          1
+(eq. (2)). The conversion constant R equals the K­V mechanical relaxation time and is
+in principle measurable from the fluid properties of the medium (eq. (4)).
+
+    The aim of this article is not to refute QED, but to demonstrate that this model: (1) is
+self-consistent within its framework -- its mathematical description for transverse far-field
+components reduces to the known Jones formalism for polarization [7]; (2) is mechanically
+grounded -- the correspondence A = Ru is derived from the K­V constitutive law in [1];
+(3) differs from standard theory through fundamentally testable predictions, the most
+important of which is the existence of a near-field longitudinal displacement component
+in the vacuum medium surrounding a propagating photon, at sub-wavelength distances
+from the beam axis [8, 9]; and (4) is falsifiable -- it offers specific experiments whose
+results can unambiguously confirm or refute its key postulates [10].
+
+    Thus, the work focuses on developing and describing critical experiments designed to
+test this hypothesis and quantitatively evaluate its predictions [8, 9].
+
+2 Theoretical Framework
+
+2.1 Summary of the Kelvin­Voigt mechanical analogy
+
+We collect here the key results of [1] that are used throughout this paper; readers familiar
+with that work may skip to Sec. 2.2.
+
+Vortex-ring medium and shear modulus. A dilute assembly of compact Hill-type
+vortex rings in an incompressible fluid acts as a viscoelastic Kelvin­Voigt (K­V) solid.
+Each ring of circulation  and core radius r0 provides an elastic restoring force upon
+deformation; the collective (Tkachenko) back-reaction of neighbouring rings yields the
+effective shear modulus [11]
+
+G  =  0 2   (dominant Tkachenko contribution),                     (2)
+      4r02
+
+with an additional shape-stability contribution of similar order (Gshape  1.94 GTk), so
+G  02/r02 in both cases. The K­V constitutive relation for the deviatoric stress is
+
+             = 2G E(d) + 20 D(u),                                  (3)
+
+where d is the displacement field, u = td the velocity, and 0 = 0 the dynamic
+viscosity. The shear-wave speed and K­V relaxation time are
+
+      c  G/0,            R    KV  =                    0  =        (4)
+                                                       G     c2 .
+
+Wave equation for the vector potential. For the solenoidal velocity field u (guar-
+anteed by incompressibility  · u = 0), the K­V constitutive law (3) inserted into the
+linearised momentum balance gives the damped shear-wave equation
+
+            ttu - c22u = 2tu.                                      (5)
+
+The electromagnetic vector potential is identified as
+
+               A  R u,                                             (6)
+
+                         2
+so that A satisfies the identical equation
+
+                 ttA - c22A = 2tA.                            (7)
+
+This is an exact consequence of the K­V constitutive law, not an additional assumption.
+
+Coulomb gauge from incompressibility. Since A = Ru and  · u = 0 (incompress-
+
+ibility),
+
+                  · A = R  · u = 0.                           (8)
+
+The Coulomb gauge condition holds identically, as a direct consequence of the incom-
+pressible K­V medium, without being imposed by hand.
+
+Circulation invariant and hydrodynamic charge. By Kelvin's circulation theorem,
+the circulation  = C u · dl around any loop encircling a vortex tube is conserved to
+O() where  = /(cL)  1 is the viscosity parameter. The hydrodynamic charge--the
+circulation invariant of the vortex--is
+
+                 Q  0 r0 ,                                    (9)
+
+with the sign fixed by the right-hand rule orientation of C. Quantisation of circulation,
+n = nh/mvac, mirrors the discreteness of electric charge.
+
+2.2 Electromagnetic potentials and Coulomb gauge
+
+In the Coulomb gauge (·A = 0,  = 0 for source-free fields), the field­potential relations
+
+reduce to [12]:
+
+                         A                                    (10)
+                 E = - , B =  × A.
+                 t
+
+These completely describe free electromagnetic waves. In QED the same relations hold
+for field operators E^ = -tA^ ; the single-photon state |1k, = a^k+,|0 has vanishing field
+
+expectation values but well-defined operator structure [4, 13].
+
+2.3 Vortex model correspondence
+
+Within the K­V vortex model [1] (see Sec. 2.1), a photon is a compact vortex ring
+with a localized core propagating through the viscoelastic medium [14, 15]. The vortic-
+ity is concentrated near the ring centreline and decays smoothly to negligible values at
+distances large compared to the core size; the specific core profile does not affect the inte-
+gral quantities (circulation, orbital radius) on which the model relies. The field­velocity
+correspondence A = R u (eq. (6)) is derived from the K­V constitutive law (3) and
+incompressibility, as shown in Sec. 2.1.
+
+    For a fluid element on the ring with tangential velocity V:
+
+                       A                    R  =  KV  =  0 .  (11)
+                 V= ,                                    G
+
+                        R
+
+Incompressibility gives the Coulomb gauge  · A = 0 exactly. The electric field corre-
+
+sponds to (minus) the fluid acceleration:
+
+                            V                                 (12)
+                 E = -R .
+                                               t
+
+For circular motion on a ring of major radius , the centripetal acceleration has magnitude
+
+|tV| = V 2/ = 2, giving |E| = R2.
+
+                                            3
+             z
+
+propagation                            ring
+                                       centreline
+             b
+                                         core
+                a                        (shaded)
+
+                                 r                          x
+
+y
+
+Figure 1: Geometry of the photon-vortex ring. The major radius  scales as -1/2
+(eq. (14)); the core size r0 sets the near-field range (eq. (16)). Angles (a, b) parameterize
+the vortex orientation and determine the polarization state (Sec. 2.6.2).
+
+2.4 Photon energy from quantum circulation
+
+The rotational frequency  of fluid elements is identified with the photon angular fre-
+quency. The Onsager­Feynman quantization condition for circulation in a superfluid-like
+medium [16, 17, 18] requires:
+
+           h                                                   (13)
+n = n mvac , n = 1, 2, . . . ,
+
+where mvac is an effective mass scale of the vacuum medium. For a fluid element on the
+ring of major radius  with tangential speed V = , the circulation is  = 2V =
+22. Setting n = 1 in (13):
+
+22 = h = () =                          .                       (14)
+  mvac                                 mvac 
+
+Higher-frequency photons correspond to smaller vortex rings:   -1/2. The multi-
+quantum generalisation (n > 1, same ) gives allowed frequencies n = n/(mvac2) =
+n1, so the energy spectrum is:
+
+             En = n = n,                                       (15)
+
+reproducing the Planck­Einstein relation from the vortex quantization condition alone. A
+complete quantitative check--computing the K­V elastic energy of the ring and verifying
+Ering = --would fix mvac in terms of c, G, and 0, and remains an open problem.
+
+                                    4
+2.5 Identification of the vortex core radius
+
+The quantitative experimental predictions depend on the vortex core size r0, which sets
+the transverse scale of the near-field longitudinal component. In classical vortex dynamics
+
+r0 is a free parameter; in the K­V medium it is set by the coherence length of the medium.
+    Pending a first-principles derivation from the K­V elastic energy, we adopt the esti-
+
+mate                                 c
+
+                        r0            2  =    ,                          (16)
+                                            
+
+motivated as follows. The near-field displacement rz  sin b must vanish at distances
+much larger than  (otherwise it would contribute to the propagating wave mode, vio-
+
+lating the Coulomb gauge). The largest core size consistent with sub-wavelength con-
+finement is therefore r0  /2. A lower bound r0  ° = /(2) is set by the photon's
+
+quantum coherence length (reduced wavelength). Thus
+
+                                                                         (17)
+                                      r0     .
+                        2                   2
+
+For visible light (  500 nm) this gives a concrete experimental target:
+
+                        80 nm  r0  250 nm.                               (18)
+
+Near-field probes with apertures  50­100 nm can reach this regime.
+
+2.6 Jones formalism for vortex-ring polarization
+
+Consider a thin-walled vortex ring of major radius  (distinct from the core radius r0 and
+the conversion constant R = KV) whose centre of mass propagates with velocity V along
+z. Each fluid element on the ring moves with constant tangential speed in a circular orbit
+whose plane is specified by the orientation angles (a, b): a is the azimuthal rotation about
+z, and b is the tilt of the ring plane away from the xy-plane.
+
+2.6.1 Vortex-ring trajectory in the laboratory frame
+
+In the vortex's own frame a fluid element on the ring traces a circle in the xy-plane with
+
+phase  = t + , where  is the element's initial phase ( = 0 for the element on the
+
+x-axis at t = 0):
+
+                        rloc =  cos , sin , 0 .                          (19)
+
+Transforming to the laboratory frame applies the inverse rotations in reverse order,
+rglobal = Rz(-a) Rx(-b) rloc, with
+
+                   1 0  0                         cos a sin a 0
+
+      Rx(-b) = 0 cos b sin b , Rz(-a) = - sin a cos a 0 .                (20)
+
+                   0 - sin b cos b               0                  01
+
+Carrying out the matrix products yields the trajectory components:
+
+                   rx =  cos a cos  - sin a cos b sin  ,                 (21)
+
+                   ry =  sin a cos  + cos a cos b sin  ,                 (22)
+
+                   rz =  sin b sin .                                     (23)
+
+                                      5
+As a consistency check: at  = 0 the element is at (cos a, sin a, 0), the position after the
+two applied rotations; at  = /2 it reaches (- sin a cos b, cos a cos b, sin b).
+
+    To identify the propagating electromagnetic mode we adopt the convention  = -t
+(right-hand circulation viewed from +z; reversing to  = +t corresponds to b   - b,
+see Sec. 2.6.2) and form the analytic signal in the transverse plane. Substituting into the
+xy-components and collecting the identities cos  - i sin  = e-i and sin  + i cos  = ie-i
+gives
+
+X = e-i cos a - i sin a cos b ,                                            (24)
+
+Y = e-i sin a + i cos a cos b .                                            (25)
+
+Defining the Jones complex amplitudes
+
+Jx = cos a - i sin a cos b,                                                (26)
+
+Jy = sin a + i cos a cos b,                                                (27)
+
+and setting  = -t yields X = eitJx, Y = eitJy, with amplitudes and phases
+
+Ex = |Jx|, x = arg Jx = - arctan(tan a cos b),                             (28)
+
+Ey = |Jy|, y = arg Jy = - arctan(cot a cos b),                             (29)
+
+and Z = 0. The Z = 0 result is not a trivial projection artefact: K­V incompressibility
+( · u = 0) imposes the Coulomb gauge ( · A = 0), which together with the source-free
+wave equation forces any propagating solution to be transverse, so the xy-projection of the
+vortex trajectory is exactly the propagating far-field mode. The physical z-displacement
+rz =  sin b sin  = 0 for b = 0 is a non-propagating near-field component confined to
+|r - rvortex|  r0 and discussed in Sec. 2.6.3.
+
+    We thus obtain complete correspondence with the Jones formalism [7]. The mapping
+(a, b)  (Jx, Jy) is not one-to-one: parameter pairs (a, b) and (a + , -b) yield the same
+Jones vector up to an overall phase, so the vortex orientation is determined by the Jones
+state only up to this equivalence.
+
+2.6.2 Correspondence between vortex orientation and polarization state
+
+The two-parameter family (a, b) spans the full Poincaré sphere. The tilt angle b controls
+the ellipticity of the polarization: b = /2 places the vortex ring edge-on with respect
+to the propagation direction (linear polarization), while b = 0 or b =  places it face-
+on (circular polarization, with opposite handedness). The azimuthal angle a sets the
+orientation of the polarization ellipse.
+
+    The correspondence is verified by direct substitution:
+
+    · At b = 0: Jx = e-ia, Jy = ie-ia, so (Jx, Jy)  (1, i) -- right circular, independent
+       of a.
+
+    · At b = : Jx = eia, Jy = -ieia, so (Jx, Jy)  (1, -i) -- left circular.
+
+    · At b = /2: Jx = cos a, Jy = sin a (both real) -- linear, at orientation angle a.
+
+    · General 0 < b < /2 or /2 < b < : elliptical.
+
+    The principal cases are collected in Table 1, and Fig. 2 maps the (a, b) parameters
+onto the Poincaré sphere. The third Stokes parameter is S3 = cos b, so the degree of
+circular polarization is read off directly from the vortex tilt angle.
+
+                                       6
+Table 1: Vortex orientation parameters (a, b) and corresponding polarization states.
+
+a    b   Polarization state
+
+0    /2  Linear, horizontal (x)
+
+/2   /2  Linear, vertical (y)
+
+/4   /2  Linear, 45
+
+any  0   Right circular
+
+any      Left circular
+
+general 0 < b < , b = /2 Elliptical
+
+2.6.3 Near-field structure: the longitudinal displacement component
+
+The derivation above shows that the transverse projection (XY plane) of the vortex-
+ring trajectory maps exactly to the Jones 2-component vector, establishing that the
+propagating electromagnetic mode is strictly transverse. This is entirely consistent with
+the K­V model: incompressibility ( · u = 0) implies the Coulomb gauge  · A = 0
+exactly (eq. (8)), which together with the source-free Maxwell equations in the exterior
+gives  · E = 0, i.e. no longitudinal propagating component.
+
+    However, for a vortex ring with tilt angle b = 0, the z-coordinate of a fluid element
+on the ring surface reads (eq. (23)):
+
+     rz =  sin(b) sin(),  = t + ,                                    (30)
+
+which is non-zero. This z-oscillation represents a near-field longitudinal displace-
+ment of the vacuum medium within the vortex core region (|r - rvortex|  r0). It does
+not propagate as a wave mode (it is suppressed at distances  r0 by the incompressibility
+constraint), but it is present in the immediate vicinity of the photon-vortex.
+
+    Crucially, Coulomb gauge does not prohibit Az = 0 pointwise: it only requires ·A =
+0. Near the vortex core, Az = R uz = 0 while zAz is compensated by xAx + yAy to
+maintain the divergence-free condition. The resulting near-field Ez = -tAz - z = 0
+is analogous to the longitudinal near-field components of an oscillating electric dipole.
+
+    Contrast with standard QED: In standard QED a free photon in vacuum has
+no near-field structure at sub-wavelength distances (there is no physical medium and
+no vortex topology). Therefore the existence of a detectable near-field Ez at transverse
+distances r  r0 from the photon path is a falsifiable signature unique to the vortex
+model.
+
+3 Experimental Verification of the Model
+
+3.1 Near-field Search for Longitudinal Displacement Component
+
+Core distinction:
+
+    · Standard model: Electromagnetic waves in vacuum are strictly transverse every-
+       where for a free photon propagating away from any physical objects or boundaries.
+       The vectors E and B are perpendicular to k; no sub-wavelength longitudinal near-
+       field structure exists in the absence of a physical medium, scatterer, or aperture.
+
+    · Vortex model: The far-field propagating mode is transverse (Jones formalism,
+       Coulomb gauge from K­V incompressibility, Sec. 2.6.3). However, the vortex ring
+
+                                                        7
+S= sin b cos 2a     right circular
+S= sin b sin 2a     (b = 0)
+S= cos b
+
+                    b                                           linear
+                                 2a                            (b = /2)
+
+                                                left circular
+                                                    (b = )
+
+Polar angle from north pole = b ; azimuthal angle = 2a
+
+Figure 2: Poincaré sphere representation of the vortex orientation parameters (a, b). The
+polar angle from the north pole equals b; the azimuthal angle equals 2a.
+
+has a non-zero longitudinal displacement rz =  sin(b) sin(t) for tilt angle b =
+0, producing a near-field longitudinal electric component Ez = 0 at transverse
+distances r  r0 from the photon path. This is an evanescent near-field effect,
+not a propagating mode.
+
+    Critical experimental requirement: The probe must couple to the photon field
+at sub-wavelength transverse distance r  r0 from the beam axis, in the range
+80­250 nm for visible light (eq. (18)). A conventional scanning near-field optical mi-
+croscope (SNOM) is not suitable for probing free photons in vacuum: the tip perturbs
+or absorbs the photon rather than probing it non-destructively. Instead, we propose
+photon-induced near-field electron microscopy (PINEM) [19].
+
+    Setup: An ultrashort laser pulse (pump, wavelength , controlled polarization) is
+focused into a collimated beam in vacuum. A synchronised pulsed electron beam (probe,
+kinetic energy 100­300 keV) travels parallel to the laser axis z^ at controlled transverse
+offset r (electron trajectory: (0, r, vet)). In the PINEM interaction, the electron
+exchanges energy quanta  with the optical field; for an electron of velocity ve along z,
+the coupling constant is [19]:
+
+       
+
+g(r)             Ez(0, r, z; t=z/ve) eiz/ve dz,                          (31)
+
+       -
+
+where Ez is the field component along the common propagation axis z. For a strictly
+transverse wave in vacuum, Ez = 0 everywhere and g = 0. The vortex model predicts
+
+                 8
+Ez = 0 at r  r0, producing a non-zero coupling that scales as sin b (from eq. (23)) and
+decays on scale r0 in r.
+
+    Procedure: Scan r from  0.1 to  2, recording the electron energy-loss spec-
+trum (sidebands at ±n) for each impact parameter. Extract the PINEM coupling
+constant |g(r)|2 from the sideband intensities. Repeat for linearly polarized (b = /2)
+and circularly polarized (b = 0) pump beams.
+
+    Control: (1) Compare coupling profiles for linear vs. circular polarization. The vortex
+model predicts |g|2  sin2 b: maximum for linear (b = /2), zero for circular (b = 0);
+standard QED predicts no polarization dependence of any anomalous Ez signal. (2) Use
+a reference geometry with the electron beam on-axis to characterise the background from
+the standard transverse field interaction.
+
+    Experimental challenge: Standard PINEM experiments rely on a material nanos-
+tructure (metal tip, nanoparticle, or aperture) to provide near-field enhancement that me-
+diates the electron­photon coupling. For free photons propagating in open vacuum with
+no scatterer present, the only source of a longitudinal component is the photon-vortex
+near-field itself, so the coupling is expected to be far weaker than in surface-enhanced
+PINEM geometries. Detecting it will require laser-pulse energies and electron-beam
+currents near the upper limits of current experimental capability, together with care-
+ful subtraction of the on-axis reference signal arising from the standard transverse-field
+interaction. This challenge is, however, precisely what makes the experiment critical: a
+polarization-dependent residual at r  r0 in the absence of any material scatterer would
+be unambiguous evidence for the near-field structure predicted by the vortex model and
+could not be attributed to surface-plasmon or aperture-diffraction artefacts.
+
+    Expected result according to standard theory: The PINEM coupling |g(r)|2
+is determined by the transverse field components E only, falling off as a standard Bessel
+function of r, with no dependence on polarization ellipticity. Negative result (no anoma-
+lous polarization-dependent component) refutes the near-field prediction of the vortex
+model.
+
+    Expected result according to vortex model: An anomalous contribution to
+|g(r)|2 at r  r0, scaling as sin2 b (vanishing for circular polarization, maximal for
+linear), and falling off on a scale  r0  ° beyond the core region.
+
+3.2 Angular Momentum Transfer and Vortex Topology at Pho-
+
+       ton Absorption
+
+Core distinction:
+
+    · Standard model: A photon is a massless particle with spin 1, obeying conser-
+       vation laws of energy, momentum, and angular momentum [20]. Its creation and
+       absorption are point-like interaction acts in quantum field theory. The spin angu-
+       lar momentum ± is transferred to the absorbing atom as an internal (electronic)
+       excitation, not as mechanical rotation of the atom's centre of mass.
+
+    · Vortex model: A photon is a compact vortex ring with circulation  conserved
+       by Kelvin's theorem to order  = /(cL)  1 (Sec. 2.1). The charge analogue
+       Q = 0r0 (eq. (9), the circulation invariant) characterises the topological content
+       of the photon. Upon absorption, the vortex topology must be either transferred
+       to the absorbing atom/molecule or shed into the surrounding K­V medium. Both
+       scenarios produce observable signatures distinct from QED: the absorbed angular
+
+                                                        9
+       momentum has a mechanical (orbital) component tied to the spatial extent of the
+       vortex ring, not purely to the internal electronic degree of freedom.
+
+    Experiment description: Probe the mechanical recoil and angular momentum dis-
+tribution during single-photon absorption in an isolated atom/ion.
+
+    Setup: An ion or atom cooled to ultralow temperatures and trapped in an ion trap
+(Paul or Penning type). A source of single photons (e.g., quantum dot or cavity QED
+source) emitting photons with known angular momentum (circularly polarized, b = 0:
+vortex ring in XY plane, spin axis along propagation direction).
+
+    Procedure: Observe the full quantum state of the ion after photon absorption.
+According to standard theory, the ion receives linear recoil p = k and its internal angular
+momentum changes by ± (spin). The vortex model predicts an additional mechanical
+orbital angular momentum component proportional to r0   transferred from the
+vortex topology, potentially causing centre-of-mass rotation of the trapped ion about the
+beam axis, in excess of what QED predicts from the standard spin-to-orbit coupling.
+
+    Control: (1) Compare the result for circularly polarized (b = 0, ring in XY plane,
+spin axis along z) vs. linearly polarized (b = /2, ring tilted, no spin component along
+z) photons. (2) Verify that the total angular momentum balance is satisfied: any excess
+orbital angular momentum transferred to the ion must be absent in the linearly polarized
+case.
+
+    Expected result according to standard theory: The change in the ion's mechan-
+ical angular momentum will equal the photon's spin (±) through standard spin-orbit
+coupling, with no anomalous centre-of-mass rotation. Negative result refutes the vortex
+model.
+
+    Expected result according to vortex model: Photon absorption will cause a
+measurable orbital recoil whose magnitude scales with the vortex core radius r0 and
+circulation  = Q/(0r0). The effect should vanish for linear polarization and be maximal
+for circular polarization.
+
+    Note on the quantitative prediction: The orbital angular momentum Lorb 
+r0 contains the undetermined parameter mvac (via  = h/mvac and r0  /(mvacc),
+see Sec. 2.4). The prediction is therefore currently parametric: a specific numerical
+value awaits the determination of mvac from the energy condition Ering = . If self-
+consistency requires Lorb  , present-day ion-trap experiments on laser-cooled ions
+(e.g. 40Ca+) can resolve individual angular-momentum quanta  via motional sideband
+spectroscopy, placing this regime within reach. The discriminating observable is the
+difference in mechanical angular-momentum transfer for circular (b = 0) versus linear
+(b = /2) polarization at equal  and k: standard QED forbids any such difference,
+while the vortex model predicts it.
+
+4 Conclusion
+
+In this work, we have analyzed the vortex photon model grounded in the Kelvin­Voigt
+mechanical analogy for Maxwell's equations developed in [1] and summarised in Sec. 2.1.
+The K­V framework provides a mechanical basis for the correspondence A = Ru (eq. (6)),
+where R = KV = 0/G (eq. (4)) is a measurable mechanical constant derived from the
+constitutive law (3).
+
+    We have shown that for transverse far-field components, the model reduces exactly
+to the Jones formalism, consistent with all known polarization phenomenology. More
+
+                                                       10
+Table 2: Summary of proposed experimental tests. Both predictions are derived from the
+
+K­V mechanical analogy of [1].
+
+Experiment  Standard Model Predic- Vortex (K­V) Model
+
+            tion                    Prediction
+
+PINEM coupling Coupling determined by trans- Anomalous coupling at r 
+
+|g(r)|2 at r  r0 verse E only; no polarization- r0  °; zero for circular po-
+
+from beam   ellipticity dependence  larization (b = 0, sin2 b = 0),
+
+                                    maximal for linear (b = /2)
+
+Photon absorption Linear recoil k + spin ± Excess orbital c.o.m. angular
+
+momentum trans- only; no anomalous c.o.m. ro- momentum  r0; depends
+
+fer         tation                  on polarization ellipticity
+
+importantly, the K­V incompressibility condition derives the Coulomb gauge  · A = 0
+(eq. (8)), confirming that the propagating mode is strictly transverse -- in full agreement
+with Maxwell's equations.
+
+    The principal novel prediction of the model concerns the near-field structure of the
+photon-vortex: for a tilted vortex ring (b = 0), a non-zero longitudinal displacement rz =
+0 exists at distances  r0 from the vortex core. This produces a near-field longitudinal
+electric component Ez = 0 detectable at sub-wavelength transverse distances r  r0
+from the beam axis via photon-induced near-field electron microscopy (PINEM) [19].
+Standard QED predicts no such near-field structure for free photons in vacuum.
+
+    We have proposed two falsifiable experimental schemes: (1) measurement of the
+PINEM coupling constant |g(r)|2 as a function of transverse impact parameter and
+polarization ellipticity, sensitive to any anomalous longitudinal field at r  r0  °; (2)
+measurement of excess orbital angular momentum transfer during single-photon absorp-
+tion in a trapped ion, sensitive to the vortex circulation invariant Q = 0r0.
+
+    Standard QED predicts strictly negative results in both experiments. Any confirmed
+positive result consistent with the model's quantitative predictions would have profound
+implications for our understanding of the physical vacuum. Conversely, negative results
+within achievable precision would falsify the vortex interpretation while still providing
+precision tests of the transverse nature of photons in vacuum and the completeness of
+QED angular momentum accounting.
+
+    Based on the requirement that the near-field be confined to sub-wavelength scales,
+we estimate °  r0  /2, giving a concrete experimental target of 80­250 nm for visible
+light (Sec. 2.5). A first-principles derivation of r0 from the K­V elastic energy of the
+vortex ring, and the associated quantitative prediction of the PINEM coupling amplitude,
+remain as key priorities for future work; this will require identifying mvac in terms of c,
+G, and 0 from the energy condition Ering = .
+
+References
+
+ [1] D. S. Losinets. Maxwell's equations from vortex mechanics: A kelvin­voigt analogy.
+      Zenodo, 2026.
+
+ [2] R. Loetzsch et al. Testing quantum electrodynamics in extreme fields using helium-
+      like uranium. Nature, 625:673, 2024.
+
+                                11
+ [3] R. G. Bullis et al. Ramsey spectroscopy of the 2s1/2 hyperfine interval in atomic
+      hydrogen. Physical Review Letters, 2023.
+
+ [4] S. J. Brodsky. Review of quantum electrodynamics. Technical report, Stanford
+      Linear Accelerator Center, 1992.
+
+ [5] S. G. Karshenboim. Precision physics of simple atoms: Qed tests, nuclear structure
+      and fundamental constants. Physics Reports, 2005.
+
+ [6] S. Powers, G. Xu, et al. A statistical model for quantum spin and photon number
+      states. arXiv preprint, 2024.
+
+ [7] M. Born and E. Wolf. Principles of Optics: Electromagnetic Theory of Propagation,
+      Interference and Diffraction of Light. Cambridge University Press, 7th (expanded)
+      edition, 1999.
+
+ [8] D. Sakhno, E. Koreshin, and P. A. Belov. Longitudinal electromagnetic waves with
+      extremely short wavelength. Physical Review B, 104:L100304, 2021.
+
+ [9] D. Maluenda, M. Aviñoá, et al. Experimental estimation of the longitudinal compo-
+      nent of a highly focused electromagnetic field. Scientific Reports, 2021.
+
+[10] A. Zhakatayev and L. Tlebaldiyeva. Long-range longitudinal electric wave in vacuum
+      radiated by electric dipole: Part i. Radio Science, 2020.
+
+[11] V. K. Tkachenko. On vortex lattices. Soviet Physics JETP, 22:1282­1286, 1966.
+
+[12] A. Blais and A. L. Grimsmo. Circuit quantum electrodynamics. Reviews of Modern
+      Physics, 93:025005, 2021.
+
+[13] M. Markiewicz, D. Kaszlikowski, P. Kurzyski, et al. From contextuality of a single
+      photon to realism of an electromagnetic wave. npj Quantum Information, 5:5, 2019.
+
+[14] L. Drori et al. Quantum vortices of strongly interacting photons. Science, 2023.
+
+[15] J. P. Restrepo Cuartas and C. A. Flórez-Acosta. Dynamics of a quantum polariton
+      vortex: Low-excitation scenario. Physical Review B, 110:155433, 2024.
+
+[16] L. Onsager. Statistical hydrodynamics. Nuovo Cimento Suppl., 6:279­287, 1949.
+
+[17] R. P. Feynman. Application of quantum mechanics to liquid helium. In C. J. Gorter,
+      editor, Progress in Low Temperature Physics, volume 1, pages 17­53. North-Holland,
+      1955.
+
+[18] R. J. Donnelly. Quantized Vortices in Helium II. Cambridge University Press, 1991.
+
+[19] B. Barwick, D. J. Flannigan, and A. H. Zewail. Photon-induced near-field electron
+      microscopy. Nature, 462:902­906, 2009.
+
+[20] L. Allen, M. W. Beijersbergen, R. J. C. Spreeuw, and J. P. Woerdman. Orbital
+      angular momentum of light and the transformation of laguerre­gaussian laser modes.
+      Physical Review A, 45:8185­8189, 1992.
+
+                                                       12
+
