@@ -177,6 +177,8 @@ Losinets derives r_m/r_c ≈ 5.2 parameter-free from equal-charge + Hill two-zon
 
 A yes on all three would be a substantive three-way agreement between Losinets (two zones from equal-charge ansatz), MaSt (two scales from T⁶ projection), and Hofstadter (two scales measured directly). A clear no on any one of them falsifies the equivalence at the compound-particle layer.
 
+**Status (R60, 2026-04):** tested — **fails at the kinematic level**. All twelve (density × projection) combinations produce two scales, but the ratios cluster in [1.3, 1.8] near the raw p-sheet ratio L₆/L₅ ≈ 1.82, never reaching 4.0. Only Fourier-form-factor projections deliver an outer scale near 1.3 fm (matching r_m), but the partnering inner scale sits at ~0.95 fm rather than ~0.25 fm, so the ratio is wrong. The result points to the Hofstadter mantle being dynamical (self-field / K–V elastic wake) rather than part of the T⁶ eigenmode amplitude, and constrains R55: a purely local Ma-S rescaling of the p-sheet cannot generate the 5.2 ratio; a second physical-space scale must enter. Full report: [R60 findings](../studies/R60-losinets-projection/findings.md).
+
 ### C2. m_vac from MaSt geometry
 
 If Losinets's free-photon ring radius ρ(ω) equals a MaSt confinement scale at the particle's natural frequency, m_vac is no longer free. The literal identification (previous versions of this note):
