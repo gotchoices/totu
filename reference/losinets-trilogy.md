@@ -187,23 +187,24 @@ See `studies/R61-losinets-mantle-wake/findings.md`.
 
 **Status (R60, 2026-04):** tested — **fails at the kinematic level**. All twelve (density × projection) combinations produce two scales, but the ratios cluster in [1.3, 1.8] near the raw p-sheet ratio L₆/L₅ ≈ 1.82, never reaching 4.0. Only Fourier-form-factor projections deliver an outer scale near 1.3 fm (matching r_m), but the partnering inner scale sits at ~0.95 fm rather than ~0.25 fm, so the ratio is wrong. The result points to the Hofstadter mantle being dynamical (self-field / K–V elastic wake) rather than part of the T⁶ eigenmode amplitude, and constrains R55: a purely local Ma-S rescaling of the p-sheet cannot generate the 5.2 ratio; a second physical-space scale must enter. Full report: [R60 findings](../studies/R60-losinets-projection/findings.md).
 
-### C2. m_vac from MaSt geometry
+### C2. m_vac from MaSt geometry (tested by R62 — does not stabilise)
 
-If Losinets's free-photon ring radius ρ(ω) equals a MaSt confinement scale at the particle's natural frequency, m_vac is no longer free. The literal identification (previous versions of this note):
-
-- ω_e = m_e c²/ℏ ≈ 7.76 × 10²⁰ rad/s,
-- ρ = L₂/(2π) ≈ 1.89 fm (taking L₂ = 11.9 fm as the e-sheet ring circumference),
-- m_vac = ℏ/(ω·ρ²) ≈ **3.8 × 10⁻²⁶ kg ≈ 21 GeV/c²**.
-
-(An earlier version of this note gave ~200 GeV/c², which was arithmetically wrong.)
-
-**This 21 GeV number is a number, not a derivation.** The identification assumes:
-
-- the relevant ω for a confined mode is the Compton frequency (it may differ by 2π or by a wrapping factor),
-- the relevant ρ for a confined mode is a 3D ring radius equal to L₂/(2π), even though L₂ is a length of a compact dimension, not a 3D vortex ring radius (T4 above),
-- n = 1 is the right quantum number.
-
-Each assumption is questionable. The correct attitude: if **some** careful identification of ρ and ω yields an order-of-magnitude stable value of m_vac from MaSt's geometry alone, with no adjustable factor, that would close one of Losinets's main open questions. The 21 GeV result does not yet qualify — but it is in a physically reasonable range (not 10⁻²⁰ eV, not 10¹⁹ GeV), which suggests the exercise is worth finishing.
+Tested in [`studies/R62-losinets-mvac/findings.md`](../studies/R62-losinets-mvac/findings.md) across four
+(ρ, ω) identifications drawn from MaSt L-values and particle Compton
+frequencies with ρ = L/(2π), n = 1. Verdict: **no identification yields
+an order-of-magnitude stable m_vac across particles**. The e-sheet-ring
+× electron baseline reproduces 21 GeV/c² (I-1), but the p-sheet-ring ×
+proton identification (I-3) gives 83 MeV/c² — 257× lighter — and the
+ν-sheet-ring × ν₃ identification (I-4) gives 15 meV/c², twelve orders
+below baseline and incoherent (lighter than the particle it would
+support). The I-1/I-3 disagreement is **geometry-driven**: MaSt
+L-values are eigenmode scales, not free-photon ring scales, so
+(L₆/L₂)² · (m_p/m_e) = 257× rather than 1 as universality would
+require. The 21 GeV number is a per-particle identification, not a
+prediction. Exploratory closure through the classical thin-core
+kinetic energy (R62 I-5) does not cancel m_vac but introduces r₀ as a
+second free parameter — consistent with Losinets's §2.4 statement that
+a proper K-V *elastic* energy derivation remains open.
 
 ### C3. Near-field E_z structure for confined modes
 
