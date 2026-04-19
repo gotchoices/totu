@@ -263,6 +263,23 @@ condition matching the lattice resolution to the signal bandwidth.
 If such a relation existed, the free-parameter count would drop
 to zero.  This is noted but not assumed.
 
+**Losinets does not provide a route either.**  The companion K–V
+continuum framework (see `reference/losinets-trilogy.md`) has one
+dimensional EM input — a viscoelastic relaxation time R = η₀/G —
+and an obvious question is whether α = f(R · ω_Planck) for some
+clean dimensionless combination.  Working the algebra through
+Losinets's own EfD §7.4 correspondence table gives the
+unconditional result α = π·ρ₀·r₀²·ℏ / (m_vac²·c), in which **R
+does not appear**.  α and R sit on orthogonal axes of the K–V
+parameter space; reducing them to one knob requires solving an
+open Losinets problem (the ring-energy closure that would fix
+m_vac), and even then introduces r₀ as a second knob.  Full
+derivation, dimensional audits, and a corrected Planck-scale
+estimate R ≈ t_P are in [`../grid/alpha-vs-R.md`](../grid/alpha-vs-R.md).
+**Take-away:** Losinets's substrate equivalence with GRID does
+not collapse the free-parameter count — α remains the sole
+measured input on the GRID/MaSt side, independent of R.
+
 
 ## 7. Alpha as impedance mismatch: the bridge from GRID to MaSt
 

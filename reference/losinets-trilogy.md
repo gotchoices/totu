@@ -126,6 +126,8 @@ Losinets reads the failure ladder as diagnostic: each unit of strangeness introd
 | **Charge mechanism** | Topological phase winding on the lattice; e = √(4πα) | Circulation invariant Q = ρ₀·r₀·Γ (K–V units); SI via R | Tube-winding integer, Q = −n₁ + n₅ from Ma–S coupling sign |
 | **Single dial** | α (dimensionless) | R = τ_KV = η₀/G = ν₀/c² (time) | α (dimensionless, inherited from GRID) |
 
+(The three single dials sit on **orthogonal axes** of the joint K–V parameter space — α is fixed by (ρ₀, r₀, m_vac), R is the viscoelastic relaxation time, and they do not reduce to each other unless Losinets's photon §2.4 ring-energy closure is solved. See C4 below and [`grid/alpha-vs-R.md`](../grid/alpha-vs-R.md).)
+
 The three frameworks are **not** competitors but cover different slices of a single architecture. They agree strongly on concepts (charge from winding, photon as ring-like, Coulomb gauge as a consequence not an assumption), and disagree or fail to connect on substrate microstructure, free-photon internal structure, and spin sector. Both the agreements and the disagreements are structural, not cosmetic.
 
 ---
@@ -138,7 +140,7 @@ The three frameworks are **not** competitors but cover different slices of a sin
 
 **3. Mass = confined-photon frequency.** MaSt's white-paper argument *m = hf/c² for the confined-photon circulation frequency* is stated verbally. Losinets's eq. 15, E_n = n·ℏω from Γ_n = n·h/m_vac, **derives** the same relation from a specific mechanical model — modulo the interpretation of what "n" and "ω" are. MaSt's mass formula is the statement that a confined photon's energy is its eigenfrequency; Losinets's E_n = n·ℏω is the statement that a ring of fixed ρ supports a ladder of circulation quanta. These are related but not identical statements, and conflating them obscures the difference.
 
-**4. A single coupling dial.** Each framework has exactly one free electromagnetic input: α (GRID, MaSt) or R = τ_KV (Losinets). R has units of time and is measurable in principle from the fluid properties; α is dimensionless. If both descriptions are valid at different scales, there should be a relation of the form α = f(R·m_P·c²/ℏ) or similar, relating the mechanical relaxation time to the dimensionless coupling via the Planck scale. Neither paper writes this down.
+**4. One dial per framework, on orthogonal axes.** Each framework has exactly one free electromagnetic input: α (GRID, MaSt) or R = τ_KV (Losinets). R has units of time and is measurable in principle from the fluid properties; α is dimensionless. The hopeful "α = f(R · m_P·c²/ℏ)" form does not survive the algebra: substituting Losinets's K–V identifications into α = e²/(4πε₀ℏc) yields **α = π·ρ₀·r₀²·ℏ / (m_vac²·c)** and **R drops out**. The two dials are logically independent inputs to the K–V parameter space, not two names for the same number. A conditional bridge exists only if Losinets's photon §2.4 open problem (m_vac from the ring-energy closure) is solved. Full derivation, dimensional audits, and a corrected Planck-scale estimate R ≈ t_P (the trilogy's earlier μ₀/G_shear guess was a unit error) live in [`grid/alpha-vs-R.md`](../grid/alpha-vs-R.md). See also C4 below.
 
 ---
 
@@ -216,13 +218,21 @@ Losinets predicts free-photon near-field E_z ∝ sin(b)·exp(−|r|/r₀). A MaS
 
 These predictions are **analogies, not derivations**. Whether a MaSt confined mode actually inherits the Losinets (a, b) → E_z structure depends on how the compactification projects polarisation onto winding — which, per T3, is not a trivial map. Listing these as "predictions" without derivation would be overselling. Listing them as motivated targets for a projection calculation is fair.
 
-### C4. α from R
+### C4. α from R — derived; α and R are orthogonal in K–V space
 
-GRID has α as its one dimensionless EM input. Losinets has R = ν₀/c² as his one time-scale EM input. A candidate bridge:
+**Status (2026-04): worked.** Full derivation in [`grid/alpha-vs-R.md`](../grid/alpha-vs-R.md).
 
-> α = R · (some Planck-scale frequency) / (some geometric factor)
+The candidate bridge originally written here — α = R · (some Planck-scale frequency) — does not exist within Losinets's own correspondence table. Substituting the EfD §7.4 identifications **e ↔ Q = ρ₀·r₀·Γ**, **ε₀ ↔ ρ₀**, and the Onsager–Feynman quantisation **Γ = h/m_vac** into the SI definition α = e²/(4πε₀ℏc) gives the unconditional result
 
-This is the cleanest question raised by the two-framework pair: can α be read off as the ratio of two mechanical times (K–V relaxation / Planck light-crossing)? Not addressed by any of the three papers but hard to avoid once the layer map is taken seriously.
+> **α = π·ρ₀·r₀²·ℏ / (m_vac²·c)**
+
+— in which R does not appear at all. R = η₀/G is the viscoelastic relaxation time and the SI-unit conversion that makes A = R·u carry units V·s·m⁻¹; it sets dissipation and the source term in the in-medium Maxwell equations (EfD §4.6) but cancels from the dimensionless coupling ratio. **α and R live on orthogonal axes of the K–V parameter space.** A Planck-scale plug into the boxed formula gives α ~ O(1), confirming dimensional self-consistency but also showing that pinning α to 1/137 still requires choosing two of (ρ₀, r₀, m_vac) from outside Losinets's framework.
+
+**Conditional escape.** Losinets photon §2.4 flags a complete K–V elastic-energy calculation of the ring (E_ring = ℏω) as an open problem. *If* solved, it would fix m_vac as a function of (ρ₀, c, ν₀); dimensional analysis then forces m_vac = κ·ρ₀·c³·R³ for some dimensionless κ, and α ∝ r₀² / (ρ₀·c⁷·R⁶). This is a parametric two-knob relation, not the clean one-knob bridge originally hoped for, and it is contingent on the §2.4 closure.
+
+**The trilogy's "≈ 1.5 × 10⁻¹²⁶ s" guess was a unit error, not a result.** The naive substitution μ₀/G_shear has units of m²/A², not seconds — the K–V identification "μ₀ ↔ 1/G" lives entirely within the *mechanical-units* column of EfD Table 1 and does not survive an SI cross-substitution. The dimensionally correct Planck-scale estimate (G_shear = c⁴/(8πG_N), ρ₀ = G_shear/c², η₀ ≈ ρ₀·c·L_P) yields **R ≈ t_P ≈ 5.4 × 10⁻⁴⁴ s** — a falsifiable GRID prediction for the K–V relaxation time, 80 orders of magnitude away from the spurious earlier number.
+
+**Consequence for the layer map.** Both frameworks remain "one-dial-per-framework", but the dials are not two names for the same number. The "single dial" row of the layer-map table now reads "one dial per framework, on independent axes" rather than "the same dial in different units". The substrate-equivalence picture (T1) is not refuted; it just does not collapse the parameter count.
 
 ### C5. g-factor and composite-mode magnetic moments
 
