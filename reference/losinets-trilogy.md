@@ -173,15 +173,17 @@ R60 projected the proton mode (0, 0, −2, 2, 1, 3) onto 3D radial charge densit
 
 See `studies/R60-losinets-projection/findings.md`.
 
-### C1′. Dynamical mantle as K-V elastic wake (live, R61 in flight)
+### C1′. Dynamical mantle as K-V elastic wake (R61, partial pass)
 
-R60's Interpretation 2 — promoted to the active cross-check target. The MaSt T⁶ eigenmode supplies the **rotational core** (hard structure at ~0.4 fm). Losinets's **irrotational-but-circulating mantle** at ~1.3 fm is the K-V elastic wake of that charged core in the surrounding medium, not a feature of the T⁶ eigenmode amplitude. This tracks the core/mantle distinction Losinets himself draws (rotational vs irrotational-but-circulating) and makes the two frameworks **complementary**, not redundant, at the compound-particle layer.
+R60's Interpretation 2 — tested quantitatively in R61. The Hill-vortex exterior stream function in the lab frame (fluid at rest at infinity) is ψ = A sin²θ/r with A = Ur₀³/2, giving axisymmetric dipole velocities u ∝ 1/r³ and kinetic-energy density |u|² ∝ 1/r⁶ (not 1/r⁴ as an initial estimate assumed — that is the 2-D dipole scaling). Inverting w(r_mantle)/w(r_core) = η gives r_mantle = r_core · η^(−1/6).
 
-Numerical target: compute the K-V exterior field around a Hill-type core of radius ≈ 0.25–0.4 fm using Losinets's linearised EfD equations, identify the characteristic wake scale, and check whether ~1.3 fm drops out without free parameters. A tentative lead: an energy-threshold cutoff of the exterior Hill flow at η ≈ 0.01 gives r_mantle = r_core · η^(−1/4) ≈ 3.16·r_core, which for r_core = 0.4 fm lands at 1.26 fm. The full calculation will confirm or falsify.
+Result: for r_core = 0.40 fm (the R60/MaSt inner-scale peak) and η = 10⁻³ (a −30 dB "end-of-near-field" threshold), r_mantle = 1.26 fm — within 3% of Losinets's Hofstadter-based mantle radius 1.30 fm. The match is real but conditional on a threshold choice the K-V framework does not fix. A striking *unrelated* numerical coincidence also falls out: α^(−1/3) ≈ 5.156 matches Losinets's empirical r_m/r_c ≈ 5.2 within 1%, and 0.25 fm × α^(−1/3) = 1.289 fm matches 1.30 fm within 1% — flagged for follow-up because it would require α (absent from Losinets's framework) to set a geometric ratio.
 
-If the wake scale drops out: MaSt gives the eigenmode, Losinets gives the surrounding field response, Hofstadter measures the sum — the cleanest three-way agreement available at this layer, and a deliverable suitable for sending to Losinets in his own language.
+**Net verdict**: partial pass. The three frameworks are *consistent* with each other at the compound-particle layer — MaSt supplies r_core ≈ 0.4 fm, Losinets's K-V exterior supplies the 1/r⁶ decay, and a physically defensible threshold η = 10⁻³ lands at 1.26 fm. Proton/neutron mantle equivalence is automatic (|u|² ∝ A² is invariant under A → −A). But 1.3 fm is not *derived* from Losinets's equations alone without input — either r_core, η, m_π, or α.
 
-See `tickets/implement/4-losinets-mantle-as-kv-wake.md`.
+Deliverable framing for Losinets: "MaSt supplies r_core ≈ 0.4 fm from the T⁶ proton eigenmode; your Hill-vortex exterior decays to 10⁻³ of its surface |u|² at r ≈ 1.26 fm — within 3% of the Hofstadter mantle."
+
+See `studies/R61-losinets-mantle-wake/findings.md`.
 
 **Status (R60, 2026-04):** tested — **fails at the kinematic level**. All twelve (density × projection) combinations produce two scales, but the ratios cluster in [1.3, 1.8] near the raw p-sheet ratio L₆/L₅ ≈ 1.82, never reaching 4.0. Only Fourier-form-factor projections deliver an outer scale near 1.3 fm (matching r_m), but the partnering inner scale sits at ~0.95 fm rather than ~0.25 fm, so the ratio is wrong. The result points to the Hofstadter mantle being dynamical (self-field / K–V elastic wake) rather than part of the T⁶ eigenmode amplitude, and constrains R55: a purely local Ma-S rescaling of the p-sheet cannot generate the 5.2 ratio; a second physical-space scale must enter. Full report: [R60 findings](../studies/R60-losinets-projection/findings.md).
 
