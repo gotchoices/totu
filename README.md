@@ -28,23 +28,29 @@ Model-E uses **7 measured inputs** to derive the rest:
 
 | Input | What it sets |
 |-------|-------------|
-| α = 1/137 | Ma-S coupling strength |
+| α = 1/137 | Ma ↔ ℵ ↔ t coupling strength (value is input) |
 | m_e | electron ring scale |
 | m_p | proton ring scale |
 | Δm²₂₁ | neutrino ring scale |
-| m_μ / m_e | e-sheet aspect ratio and shear |
+| m_μ / m_e | e-sheet aspect ratio and shear (R53 Solution D) |
 | m_τ / m_e | (same — two ratios fix two parameters) |
 | Δm²₃₁ / Δm²₂₁ | neutrino shear |
 
-Of these, 3 are dimensional scales (every theory needs units)
-and **4 are dimensionless** (α, m_μ/m_e, m_τ/m_e, Δm² ratio).
-The Standard Model has ~19 dimensionless parameters.  Model-E
-reduces this to 4 — and if GRID derives α from the lattice,
-potentially **3**.
+Of these, **3 are dimensional scales** (every theory needs units)
+and **4 are dimensionless** (α plus the mass/splitting ratios).
+The Standard Model has ~19 dimensionless parameters.  Model-F
+does not reduce this count further than model-E, but it derives
+the **structure** of α coupling geometrically (see below).
 
-From these inputs, model-E derives: 20 particle masses, nuclear
-masses from deuterium to iron, three lepton generations, charge
-quantization, neutrino oscillation, and ghost-mode elimination.
+From these inputs, model-F derives: 16 of 18 compound particle
+masses within ~1.6%, nuclear masses from deuterium to iron with
+α_Coulomb = Z² × α exactly, three lepton generations via shear
+resonance (inherited from model-E), neutrino oscillation via
+shear, charge quantization via GRID, and — new in model-F —
+**structural α universality**: the coupling mechanism (a
+Kaluza–Klein–style tube↔ℵ↔t chain) makes α the same for every
+charged particle and exactly Z²α for every Z-charged nucleus,
+given α as a single input.
 
 For background on who built this, how AI was used, and how to
 judge what you're reading, see [DISCLAIMERS](DISCLAIMERS.md).
@@ -167,10 +173,9 @@ for the full mechanism catalog.
 
 ## Models
 
-The MaSt model has evolved through five generations.  The
-**current model is model-E** — a full T⁶ metric with generation
-structure and compound modes on 18 of 20 surveyed particles
-(2 resonances interpreted as excited states).
+The MaSt model has evolved through six generations.  The
+**current model is model-F** — the model-E spectrum architecture
+lifted to an 11D metric that derives α = 1/137 from geometry.
 
 | Model | Era | Key idea | Status |
 |-------|-----|----------|--------|
@@ -178,37 +183,50 @@ structure and compound modes on 18 of 20 surveyed particles
 | [model-B](models/model-B.md) | R26–R38 | Three tori / `ma.py` — first particle predictions | Superseded |
 | [model-C](models/model-C.md) | R39–R44 | Generalized model / `ma_model.py` — dynamic torus, dark matter, electroweak | Superseded |
 | [model-D](models/model-D.md) | R45–R52 | Filtered model / `ma_model_d.py` — waveguide cutoff, (1,3) proton, GRID integration | Superseded |
-| [model-E](models/model-E.md) | R53–R56 | Full T⁶ with generation structure — 18/20 spin-correct, shear resonance, 9×9 metric | **Active** |
+| [model-E](models/model-E.md) | R53–R56 | Full T⁶ with generation structure — 18/20 spin-correct, shear resonance, 9×9 metric | Superseded |
+| [model-F](models/model-F.md) | R59–R61 | **11D architecture with geometric α-coupling mechanism — structural α universality across sheets, modes, compounds, and nuclei (α = Z²α)** | **Active** |
 
-**Headline results** (model-E; see [`models/model-E.md`](models/model-E.md)):
+**Headline results** (model-F; see [`models/model-F.md`](models/model-F.md)):
 
-- **18 of 20 surveyed particles have spin-correct credible
-  modes** — stable particles (proton, electron) are exact
-  eigenmodes; unstable particles are near-misses with gaps
-  consistent with their instability.  Two extremely short-lived
-  resonances (Δ⁺, Ω⁻) are topologically forbidden as ground-state
-  modes but interpreted as excited-state overtones of the proton
-- Three charged lepton generations from in-sheet shear resonance —
-  mass ratios algebraically exact from geometry
-- Nuclear masses from deuterium to iron at ≤ 1.1%
-- Neutrino mass-squared ratio Δm²₃₁/Δm²₂₁ = 33.6 from integer
-  winding numbers (exact, parameter-free).
-- Emergent neutron — a three-sheet mode nobody put in, found by
-  the solver.
-- Nuclear scaling law: nuclei as Ma_p modes match d → ⁵⁶Fe at < 1%.
-- Plausible geometric mechanisms for dark matter, the strong force,
-  and matter–antimatter asymmetry.
+- **Geometric mechanism for α coupling** — the tube↔ℵ↔t
+  Kaluza–Klein-style chain with natural-form parameters
+  σ_ta = √α, σ_at = 4πα, g_aa = 1 (R59 F59, R60 Track 9)
+  derives the *structure* by which Ma-sheet windings couple to
+  spacetime at strength α.  The *value* α = 1/137 is still
+  input (via σ_ta = √α); model-F does not derive it from first
+  principles.
+- **α universal across every charged particle** by construction.
+  The mode-dependent corrections that arise from internal shears
+  are cancelled by a structural ring↔ℵ prescription
+  σ_ra = (sε)·σ_ta (R60 Track 7).  Given α as input, every
+  charged mode feels the same α — structural, not tuned.
+- **α_Coulomb for a Z-charged nucleus is exactly Z² × α** — the
+  Coulomb self-energy scaling of standard physics, emergent from
+  the metric structure given α as input.
+- **16 of 18 compound particles matched within 1.6%** — muon at
+  model-E's tuple (0.83%), tau, neutron, hyperons via R60-native
+  α-universal tuples (several beating model-E by 2–19×).
+- **Three charged lepton generations** inherited from model-E /
+  R53 — mass ratios algebraically exact from (ε_e, s_e).
+- **Nuclear masses from d to ⁵⁶Fe within 1.5%** via R29 scaling
+  law (`n₅ = A, n₆ = 3A`), with α_Coulomb = Z² α exact.
+- **Single-k symmetry** — the diagonal scale `k = 1.1803/(8π)`
+  is the same for all three sheets across every tested geometry.
+  Emergent structural feature of the architecture.
+- **Pion mass desert** persists as in model-E — structural MaSt
+  limitation, candidate for follow-up study.
 
-**What model-E changes** (see [`models/model-E.md`](models/model-E.md)):
-model-E treats the six compact dimensions as one T⁶ (not three
-independent sheets), with a 9×9 metric whose off-diagonal entries
-serve four distinct roles: in-sheet shears for generation structure,
-cross-sheet entries for compound modes, Ma-S entries for α coupling,
-and flat space.  Three lepton generations emerge from shear resonance.
-The (1,1) ghost is eliminated by shear ordering, not waveguide cutoff.
-Charged pion spin barrier broken via multi-sheet tube windings.
-Charge sign originates from opposite Ma-S coupling: e-sheet → S is
-negative, p-sheet → S is positive.
+**What model-F changes** (see [`models/model-F.md`](models/model-F.md)):
+model-F keeps model-E's T⁶ spectrum architecture but adds the
+ℵ dimension (sub-Planck internal edge) plus an explicit S³ × t
+block, giving an 11D metric.  The α coupling goes through a
+structural tube↔ℵ↔t chain, and a derived ring↔ℵ entry
+(`σ_ra = (sε)·σ_ta`) cancels shear-induced mode-dependence, so α
+universality is structural rather than fit.  Three lepton
+generations remain from shear resonance.  The (1,1) ghost is
+eliminated by shear ordering (inherited from model-E).  Charge
+sign originates from opposite tube↔ℵ coupling signs: e-sheet
+tube at +√α, p-sheet tube at −√α.
 
 
 ## Foundation
@@ -290,10 +308,11 @@ sheet to three (3Ma = Ma_e × Ma_ν × Ma_p), yielding Ma (R26).
 
 | File | Purpose |
 |------|---------|
-| [`models/model-E.md`](models/model-E.md) | **Current model** (active) — full T⁶ with generation structure, 18/20 spin-correct, 9×9 metric |
-| [`models/model-D.md`](models/model-D.md) | Previous model — filtered model with waveguide cutoff and (1,3) proton |
-| [`models/model-C.md`](models/model-C.md) | **Latest quantitative predictions** — particle tables, parameter census, full results |
-| [`models/README.md`](models/README.md) | Model index: all four generations (A–D) |
+| [`models/model-F.md`](models/model-F.md) | **Current model** (active) — 11D architecture with geometric α-coupling mechanism; α universal across sheets/modes/compounds, = Z²α for nuclei (α value still input) |
+| [`models/model-E.md`](models/model-E.md) | Previous model — full T⁶ with generation structure, 18/20 spin-correct, 9×9 metric |
+| [`models/model-D.md`](models/model-D.md) | Filtered model with waveguide cutoff and (1,3) proton |
+| [`models/model-C.md`](models/model-C.md) | Historical — particle tables, parameter census, dynamic torus |
+| [`models/README.md`](models/README.md) | Model index: all six generations (A–F) |
 | [`STATUS.md`](STATUS.md) | Project-level status: mission, active front, open problems |
 | [`studies/Taxonomy.md`](studies/Taxonomy.md) | **MaSt framework reference:** dimensions, geometry, particle catalog, mechanisms |
 | [`grid/README.md`](grid/README.md) | **GRID** — substrate layer: derives Maxwell + G from a discrete lattice |

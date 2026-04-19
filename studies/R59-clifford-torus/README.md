@@ -2,6 +2,7 @@
 
 **Status:** Complete — see [findings.md](findings.md) for outcomes
 **Background:** [background.md](background.md)
+**Metric reference:** [metric-terms.md](metric-terms.md)
 **Review:** [review.md](review.md)
 **Type:** theoretical + compute
 **Depends on:** R55 (ℵ-mediated coupling), R54 (particle inventory),
@@ -229,8 +230,173 @@ Acceptance criteria:
 - Metric signature preserved
 - Structural universality (α_e / α_p = 1.000) maintained
 
-Three possible interpretations of the result depending on what
-the sweep finds — see findings.md §Track 3c for outcome.
+See findings.md §Track 3c for outcome.
+
+### Track 3d: Direct tube↔t on a clean metric (no ℵ)
+
+R59 has not tested the simplest possible architecture for α
+coupling: direct tube↔t off-diagonal on a clean (shearless) Ma
+metric, with no ℵ dimension. Track 3a/3b tested ring↔t direct on
+model-E (failed spatially) and tube↔ℵ↔t (universality real, α
+magnitude needs fine-tuning). The pure tube↔t direct case on a
+clean metric was skipped.
+
+Question this track resolves: **is ℵ in the coupling loop, or out?**
+
+If direct tube↔t on a clean metric gives α_Coulomb = α at a
+natural σ value, ℵ is not needed for the coupling and the
+architecture simplifies. If it fails (signature breaks, or the
+required σ is unnatural), ℵ stays in the loop.
+
+Approach:
+1. Build 10D metric: clean Ma identity + flat S + Lorentzian t.
+2. Add tube↔t entries with ±σ for e/p (no ring entries, no ℵ).
+3. Sweep σ; identify where α_Coulomb = α.
+4. Compare the required σ to natural candidates: √α, √(4πα), 1/(2π),
+   and to the σ found in Track 3c's ℵ-mediated case.
+
+Acceptance criteria:
+- Signature preserved
+- Structural universality α_e/α_p = 1.000 (expected since both
+  tube windings = ±1)
+- α_Coulomb = α at a value that is or is not naturally expressible
+
+### Track 3e: Solve for the natural ℵ scale
+
+If ℵ stays in the loop (Track 3d shows direct tube↔t doesn't
+work cleanly), Track 3c's α_Coulomb scaling problem can be
+inverted: instead of *tuning* σ_ta to hit α at fixed g(ℵ,ℵ) = 1,
+*fix* σ_ta at a natural value (√α) and *solve* for the g(ℵ,ℵ)
+and σ_at that produce α_Coulomb = α.
+
+This treats g(ℵ,ℵ) as a derived quantity — the diagonal of the
+ℵ dimension that we have been assuming is 1. If a natural σ_ta
+combined with some specific g(ℵ,ℵ) gives observed α, that
+specific g(ℵ,ℵ) is the implied scale of the ℵ dimension. It
+might be natural (something like α, 1/(2π), L_P/L_Compton²) or
+arbitrary.
+
+Approach:
+1. Fix σ_ta = √α (natural value).
+2. 2D scan (σ_at, g_aa) to find (g_aa, σ_at) combinations
+   producing α_Coulomb = α.
+3. Identify the simplest combination.
+4. Interpret: what does that g(ℵ,ℵ) value imply about L_ℵ?
+
+Acceptance criteria:
+- α_Coulomb = α to within 1 %
+- Universality preserved (automatic on clean metric)
+- The derived g(ℵ,ℵ) is reported regardless of whether it looks
+  natural
+
+### Track 4: Parameter synthesis and metric-terms.md
+
+Synthesis track. Enumerate all metric coefficients R59 has
+considered (across all 7 prior tracks).  Identify:
+
+- Which entries are CONSTRAINED by model-E's particle spectrum
+  (and thus not available for α coupling without disrupting
+  the spectrum)
+- Which entries are FREE (available without constraint)
+- Which entries R59 has placed values at, and what those values
+  were
+- Where conflicts arise between α coupling and spectrum
+  preservation
+
+Output a single reference document (metric-terms.md) listing
+each metric coefficient, its role, its current value (if any),
+and its constraint status. Use compressed notation where
+appropriate (e.g., S as a single block, Ma as one block per
+sheet) to keep the document readable.
+
+The output answers: "What knobs do we have, where, and what's
+already used?"
+
+### Track 3g: Natural-form parameter scan
+
+Track 3f F54 found α_Coulomb = 0.977α at the simple combination
+(k = 0.10, σ_at = 0.5, g_aa = 1, σ_ta = √α).  Section 4 of the
+same script tested several natural-form candidates, with results
+in the 0.5–0.8α range but none exact.  Pre-model-E α derivations
+(R19) used parameters expressed in terms of α, π, and small
+integers — suggesting a natural-form expression for the R59
+architecture's tuning may exist.
+
+This track does a focused search over natural-form combinations
+of the architecture's three knobs (k, σ_at, g_aa) at fixed
+σ_ta = √α, looking for combinations that hit α_Coulomb = α
+exactly.
+
+Approach:
+1. Define a candidate list of "natural" values: 1, 1/2, 1/π,
+   1/(2π), 1/(4π), √α, α, α × π, α × 4π, 4πα, π, 4π, √(4πα),
+   etc.
+2. Test all combinations (k, σ_at, g_aa) from this list
+   against α_Coulomb = α.
+3. Report combinations matching to within 1%.
+4. Test fine-tuning around any near-matches to see if they
+   sharpen.
+
+Acceptance criteria:
+- A combination matches α_Coulomb = α to within 0.1%
+- Each knob has a "natural" closed-form expression
+- Universality and ν neutrality preserved
+
+Outcome possibilities:
+- Clean natural-form match found: R60 starts with this as the
+  exact target.  α is *derived* from geometry, not tuned.
+- No exact natural-form match: R60 starts with F54's approximate
+  target (k ≈ 0.1) and treats the residual ~3% as a refinement
+  problem.
+
+### Track 3f: Diagonal scaling — does Ma diagonal choice matter?
+
+R59 Tracks 3b–3e found that the tube↔ℵ↔t architecture gives
+exact universality but does NOT naturally produce α — getting
+α requires fine-tuning σ_ta or g_aa near the PD boundary. All
+those tests held the Ma diagonals fixed at the dimensionless
+identity value (1) inherited from the model-E normalization.
+
+The Ma diagonal values themselves come from a normalization
+choice (divide by L_i × L_j), not from physics.  The
+"physical" diagonals are L_i² in fm² — set by the L vector
+chosen to match particle masses.  Skepticism is warranted:
+those values may not be the "right" ones for α coupling.
+
+This track asks: **with the tube↔ℵ↔t architecture at natural σ
+values, can we produce α_Coulomb = α by scaling the Ma diagonals
+alone?**
+
+Approach:
+1. Use the clean (no-internal-shear) Ma metric.
+2. Couple e-tube and p-tube to ℵ at σ_ta = ±√α (natural).
+3. Leave ν-tube uncoupled (neutrinos are charge-neutral, so
+   no tube↔ℵ entry for the ν-sheet).
+4. Treat each sheet's diagonal block as a free scaling factor:
+   k_e, k_p, k_ν.
+5. Treat g_aa and σ_at as free knobs.
+6. Search the parameter space for combinations that produce:
+   - α_Coulomb(electron) = α (within 1%)
+   - α_Coulomb(proton) = α (universality, automatic)
+   - α_Coulomb(neutrino mode) ≈ 0 (charge neutrality preserved)
+   - Metric signature OK
+
+Acceptance criteria:
+- α_e = α to 1%, α_p = α to 1%, α_ν < 0.01α
+- Diagonal scaling values that are "reasonable" (not extreme;
+  not requiring near-singular limits)
+- Configuration documented for R60 follow-up
+
+Three possible interpretations of the result:
+- If a natural diagonal scaling produces α: F44–F46's "tuning
+  is unnatural" conclusion is reversed — the unnatural tuning
+  was a consequence of fixed bad diagonals, not the architecture
+  itself.  R60 has a clean target: find (ε, s) values that
+  produce these diagonals AND match the spectrum.
+- If only an arbitrary scaling works: confirms F44–F46.  R60
+  needs a different α mechanism.
+- If no scaling works: tube↔ℵ↔t cannot produce α regardless of
+  diagonal freedom.  Architectural dead end.
 
 ---
 
@@ -272,5 +438,6 @@ New concepts needed (derived from scratch where used):
 | [background.md](background.md) | Detailed motivation and context |
 | README.md | This framing document |
 | [findings.md](findings.md) | Results, summary, and interpretations |
+| [metric-terms.md](metric-terms.md) | Reference: every metric coefficient, value, and constraint |
 | [review.md](review.md) | Review notes on framing and execution |
 | [scripts/](scripts/) | Computation scripts (per track) |

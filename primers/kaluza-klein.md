@@ -54,19 +54,23 @@ changed. This recipe is called the **metric**.
 
 We can write the metric as a matrix. In 2D Cartesian:
 
-    ds² = dx² + dy²
+ds² = dx² + dy²
 
-    g = | 1  0 |
-        | 0  1 |
-
-    ds² = [dx, dy] · g · [dx, dy]ᵀ
+<!-- g = [[1, 0], [0, 1]];  ds² = [dx, dy] · g · [dx, dy]ᵀ -->
+$$
+g = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},
+\qquad
+ds^2 = \begin{pmatrix} dx & dy \end{pmatrix}\,g\,\begin{pmatrix} dx \\ dy \end{pmatrix}
+$$
 
 In polar coordinates:
 
-    ds² = dr² + r² dθ²
+ds² = dr² + r² dθ²
 
-    g = | 1   0  |
-        | 0   r² |
+<!-- g = [[1, 0], [0, r²]] -->
+$$
+g = \begin{pmatrix} 1 & 0 \\ 0 & r^2 \end{pmatrix}
+$$
 
 Same flat plane, different metric matrix. The metric encodes both
 the geometry of the space AND the coordinate system.
@@ -83,10 +87,12 @@ So far our metrics have been diagonal — each coordinate contributes
 independently to the distance. But metrics can have off-diagonal
 terms. Consider a 2D metric:
 
-    g = | 1  A |
-        | A  1 |
-
-    ds² = dx² + 2A dx dy + dy²
+<!-- g = [[1, A], [A, 1]];  ds² = dx² + 2A dx dy + dy² -->
+$$
+g = \begin{pmatrix} 1 & A \\ A & 1 \end{pmatrix},
+\qquad
+ds^2 = dx^2 + 2A\,dx\,dy + dy^2
+$$
 
 The cross term 2A dx dy means the coordinates are "mixed" — moving
 in x also partly counts as moving in y. You can think of this as
@@ -184,10 +190,12 @@ but that would bury the physics inside a 25-term sum. Instead,
 we split the 5×5 matrix into three groups, each with a distinct
 physical meaning:
 
-    ds² = g_μν dx^μ dx^ν + g₅₅ dw² + 2 g_μ5 dx^μ dw
-          ───────┬──────   ────┬────   ──────┬──────
-          spacetime×space   w×w        spacetime×w
-          = gravity         = scalar   = electromagnetism
+<!-- ds² = g_μν dx^μ dx^ν (gravity) + g₅₅ dw² (scalar) + 2 g_μ5 dx^μ dw (EM) -->
+$$
+ds^2 = \underbrace{g_{\mu\nu}\,dx^\mu\,dx^\nu}_{\text{gravity}}
+     + \underbrace{g_{55}\,dw^2}_{\text{scalar}}
+     + \underbrace{2\,g_{\mu 5}\,dx^\mu\,dw}_{\text{electromagnetism}}
+$$
 
 Here μ and ν each run over {t, x, y, z} — the four spacetime
 coordinates. The expression g_μν dx^μ dx^ν uses index notation
@@ -200,7 +208,14 @@ so the terms with indices (μ,5) and (5,μ) are equal and combine.
 
 For example, in just 2D:
 
-    g_μν dx^μ dx^ν = g₁₁ dx¹ dx¹ + g₁₂ dx¹ dx² + g₂₁ dx² dx¹ + g₂₂ dx² dx²
+<!-- g_μν dx^μ dx^ν = g₁₁ dx¹ dx¹ + g₁₂ dx¹ dx² + g₂₁ dx² dx¹ + g₂₂ dx² dx² -->
+$$
+g_{\mu\nu}\,dx^\mu\,dx^\nu
+  = g_{11}\,dx^1\,dx^1
+  + g_{12}\,dx^1\,dx^2
+  + g_{21}\,dx^2\,dx^1
+  + g_{22}\,dx^2\,dx^2
+$$
 
 which is just the matrix product [dx¹, dx²] · g · [dx¹, dx²]ᵀ.
 
@@ -483,6 +498,260 @@ Whether nature actually works this way is unknown. But the
 mathematical machinery is exact, and it provides a framework in
 which questions about charge, confinement, and particle structure
 can be formulated precisely.
+
+---
+
+## Appendix A: Deriving the Lorentz force from the 5D metric
+
+Sections 7–12 stated that the electromagnetic field tensor and the
+Lorentz force *emerge* from the 5D geodesic equation. This appendix
+shows the algebra explicitly.
+
+**Scope.** This appendix derives one of Kaluza's original results:
+the Lorentz force on a charged particle, obtained by projecting the
+5D geodesic equation into 4D spacetime. It does **not** cover:
+
+- The derivation of Maxwell's equations from the 5D Einstein
+  equations (a much longer calculation involving the 5D Ricci tensor)
+- Klein's quantization of charge from compactification (covered
+  conceptually in §9 of the main text)
+- The dilaton field equation from the g₅₅ component
+
+Our goal is to show, with full algebra, exactly where the
+electromagnetic field tensor F_ab arises from the 5D metric, and
+how it produces the Lorentz force in the projected equation of
+motion. The other results follow from similar (but lengthier)
+manipulations of the same metric.
+
+*(Based on V. T. Toth's derivation,
+[vttoth.com/CMS/physics-notes/118](https://www.vttoth.com/CMS/index.php?view=article&id=118).)*
+
+
+### A.1 The 5D metric ansatz
+
+We use uppercase indices A, B = 0…4 for five dimensions and
+lowercase a, b = 0…3 for four-dimensional spacetime. The 5D metric
+is written in block form:
+
+<!-- G_AB = [[g_ab + g_44 A_a A_b, g_44 A_a], [g_44 A_b, g_44]] -->
+$$
+G_{AB} = \begin{pmatrix}
+  g_{ab} + g_{44}\,A_a A_b & g_{44}\,A_a \\
+  g_{44}\,A_b & g_{44}
+\end{pmatrix}
+$$
+
+where g_ab is the ordinary 4D spacetime metric, A_a is an arbitrary
+4-vector (which will turn out to be the electromagnetic potential),
+and g₄₄ is the metric component in the compact direction. Writing
+the metric in this specific "factored" form does not lose generality
+— any 5×5 symmetric matrix can be put in this shape by absorbing
+off-diagonal entries into A_a.
+
+
+### A.2 The inverse metric
+
+The inverse of G_AB is:
+
+<!-- G^AB = [[g^ab, -A^a], [-A^b, 1/g_44 + A²]] -->
+$$
+G^{AB} = \begin{pmatrix}
+  g^{ab} & -A^a \\
+  -A^b & g_{44}^{-1} + A^2
+\end{pmatrix}
+$$
+
+where A² = A_a A^a (the norm squared of the 4-vector, with index
+raised by g^{ab}). This can be verified by direct multiplication:
+G_AB G^{BC} = δ^C_A.
+
+
+### A.3 Assumptions
+
+Two assumptions simplify the Christoffel symbols enormously:
+
+1. **g₄₄ = constant everywhere.** The scalar field component of the
+   metric (the "dilaton") does not vary. This eliminates terms
+   involving ∂g₄₄.
+
+2. **The cylinder condition: ∂₄G_AB = 0.** Nothing in the metric
+   depends on the fifth coordinate. Physically, the compact dimension
+   "looks the same" at every point along its circumference. This is
+   equivalent to saying the fifth direction is a Killing field — a
+   direction of continuous symmetry.
+
+These two conditions together kill several families of Christoffel
+symbols: Γ_{a44} = Γ_{4b4} = Γ_{44c} = 0.
+
+
+### A.4 The Christoffel symbols where F_ab appears
+
+The Christoffel symbol (connection coefficient) is defined as:
+
+<!-- Γ^C_AB = ½ G^CD (∂_A G_BD + ∂_B G_AD − ∂_D G_AB) -->
+$$
+\Gamma^C_{AB} = \tfrac{1}{2}\,G^{CD}
+  \bigl(\partial_A G_{BD} + \partial_B G_{AD} - \partial_D G_{AB}\bigr)
+$$
+
+We now compute the mixed 4–5 component. Using the cylinder condition
+(∂₄G_bd = 0) and the constant g₄₄:
+
+<!-- Γ^c_4b = ½ g^cd (∂_b(g_44 A_d) − ∂_d(g_44 A_b)) = ½ g_44 g^cd (∂_b A_d − ∂_d A_b) -->
+$$
+{}^{(5)}\Gamma^c_{4b}
+  = \tfrac{1}{2}\,g^{cd}
+    \bigl(\partial_b(g_{44} A_d) - \partial_d(g_{44} A_b)\bigr)
+  = \tfrac{1}{2}\,g_{44}\,g^{cd}
+    \bigl(\partial_b A_d - \partial_d A_b\bigr)
+$$
+
+(The second equality holds because g₄₄ is constant — assumption 1
+in §A.3 — so it factors out of both derivatives.)
+
+The quantity in parentheses is exactly the **electromagnetic field
+tensor** (sometimes called the Faraday tensor):
+
+<!-- F_bd = ∂_b A_d − ∂_d A_b -->
+$$
+F_{bd} = \partial_b A_d - \partial_d A_b
+$$
+
+F_bd encodes both the electric and magnetic fields. Its components
+are: F₀ᵢ = Eᵢ (electric field) and F_ij = ε_ijk B_k (magnetic
+field). See [`maxwell-primer.md`](maxwell-primer.md) for details.
+
+So the Christoffel symbol becomes:
+
+<!-- Γ^c_4b = ½ g_44 F_b^c -->
+$$
+{}^{(5)}\Gamma^c_{4b} = \tfrac{1}{2}\,g_{44}\,F_b{}^c
+$$
+
+By the index symmetry of the Christoffel symbols (Γ^A_{BC} = Γ^A_{CB}),
+the same calculation gives Γ^c_{a4} = ½ g₄₄ F_a^c. And Γ^b_{44} = 0
+follows directly from the two assumptions above (every term in its
+defining expression contains either ∂_4 of the metric or ∂ of g₄₄).
+
+**This is the heart of the derivation:** the field tensor F_ab —
+the mathematical object that encodes all of electromagnetism — falls
+out of the Christoffel symbols of the 5D metric. It appears because
+the off-diagonal metric entries A_a vary from point to point. Where
+A_a is constant, F_ab = 0 and there is no field; where A_a varies,
+the field is nonzero.
+
+The purely-spacetime Christoffels Γ^c_{ab} also need to be computed
+to get the gravitational part of the equation of motion. Their
+calculation is straightforward but lengthier — they reduce to the
+ordinary 4D Christoffels of g_ab plus correction terms involving
+A_a A_b that account for the electromagnetic field's contribution
+to gravity. We omit the explicit calculation here; only the mixed
+terms Γ^c_{4b} are needed to see the Lorentz force appear.
+
+
+### A.5 Projecting the geodesic equation to 4D
+
+The 5D geodesic equation (equation of motion for a free particle)
+is:
+
+<!-- d²x^A/dτ² + Γ^A_BC (dx^B/dτ)(dx^C/dτ) = 0 -->
+$$
+\frac{d^2 x^A}{d\tau^2}
+  + \Gamma^A_{BC}\,\frac{dx^B}{d\tau}\,\frac{dx^C}{d\tau} = 0
+$$
+
+where τ is the proper time along the particle's world-line. To get
+the 4D equation, we take only the A = a (spacetime) components and
+split the sum over B, C into 4D and 5th-dimension parts:
+
+<!-- d²x^a/dτ² + Γ^a_bc u^b u^c + 2 Γ^a_4b u^4 u^b + Γ^a_44 (u^4)² = 0 -->
+$$
+\frac{d^2 x^a}{d\tau^2}
+  + {}^{(5)}\Gamma^a_{bc}\,u^b u^c
+  + 2\,{}^{(5)}\Gamma^a_{4b}\,u^4 u^b
+  + {}^{(5)}\Gamma^a_{44}\,(u^4)^2
+  = 0
+$$
+
+where u^b = dx^b/dτ is the 4-velocity and u⁴ = dx⁴/dτ is the
+velocity in the compact direction.
+
+Substituting the Christoffel symbols from §A.4:
+
+- Γ^a_{44} = 0
+- Γ^a_{4b} = ½ g₄₄ F_b^a (computed above)
+- Γ^a_{bc} contains the gravitational terms (the 4D Christoffel of
+  g_ab, plus small A_a A_b corrections we are not tracking explicitly)
+
+The sum over B, C includes both (B=4, C=b) and (B=b, C=4).
+Since Γ^a_{4b} = Γ^a_{b4} (Christoffel symmetry in the lower
+indices), these two terms are equal.  Their sum is
+2 × ½ g₄₄ F_b^a u⁴ u^b, and the 2 cancels the ½:
+
+<!-- d²x^a/dτ² + Γ^a_bc u^b u^c = −g_44 u^4 F_b^a u^b -->
+$$
+\frac{d^2 x^a}{d\tau^2}
+  + {}^{(5)}\Gamma^a_{bc}\,u^b u^c
+  = -g_{44}\,\frac{dx^4}{d\tau}\;F_b{}^a\,\frac{dx^b}{d\tau}
+$$
+
+The left side is the 4D geodesic equation — the equation of motion
+under gravity alone. The right side is an additional term: a force
+proportional to the field tensor F_b^a, the 4-velocity u^b, and
+the compact-direction velocity u⁴.
+
+The quantity −g₄₄ dx⁴/dτ plays the role of the **charge-to-mass
+ratio** q/m. A particle at rest in the compact direction
+(dx⁴/dτ = 0) feels no electromagnetic force — it is neutral. A
+particle with nonzero compact momentum feels a force proportional
+to that momentum — it is charged.
+
+Written in more familiar notation, the right-hand side is exactly
+the **Lorentz force**:
+
+$$
+\frac{q}{m}\bigl(\mathbf{E} + \mathbf{v} \times \mathbf{B}\bigr)
+$$
+
+A free particle following a straight line in 5D looks like a charged
+particle being deflected by electromagnetic fields in 4D — the
+force is an artifact of projecting a 5D geodesic into 4D.
+
+
+### A.6 What the derivation establishes
+
+The computation above is purely mechanical — no physical
+assumptions beyond the metric ansatz and the cylinder condition.
+The results are:
+
+1. **F_ab from geometry.** The electromagnetic field tensor is
+   encoded in the Christoffel symbols of the 5D metric. It
+   appears wherever the off-diagonal entries A_a vary in
+   spacetime.
+
+2. **Lorentz force from geodesics.** The equation of motion for a
+   free 5D particle, projected to 4D, contains the Lorentz force
+   term. The "force" is a geometric artifact.
+
+3. **Charge = compact momentum.** The strength of the coupling to
+   the field is proportional to dx⁴/dτ — momentum in the compact
+   direction. Particles with zero compact momentum are neutral.
+
+These results do not depend on any particular field configuration,
+particle type, or energy scale. They are consequences of having a
+5×5 metric with the assumed structure.
+
+**A note on rigor.** The Γ^a_{bc} term on the left-hand side of
+A.5's final equation is the *5D* Christoffel, not the pure 4D one.
+The 5D version contains additional terms involving A_a A_b that we
+have absorbed silently. A fully rigorous treatment would split
+Γ^a_{bc} (5D) = Γ^a_{bc} (4D) + (correction terms from A_a A_b),
+showing that the corrections represent the gravitational
+back-reaction of the electromagnetic field on the spacetime
+geometry. For the purpose of seeing the Lorentz force appear, this
+extra accounting is unnecessary; for a physically complete
+treatment in a curved spacetime carrying a real EM field, it
+matters.
 
 ---
 

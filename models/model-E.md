@@ -1,6 +1,6 @@
-# Model: model-E (Full T⁶ with generation structure) ⟵ ACTIVE
+# Model: model-E (Full T⁶ with generation structure) — Superseded by [model-F](model-F.md)
 
-**Status:** Active — R53/R54 complete, R55 framed
+**Status:** Superseded — spectrum results inherited by model-F on an α-derivable 11D metric (R60)
 **Code:** [`studies/lib/ma_model_d.py`](../studies/lib/ma_model_d.py) (engine shared with model-D; metric extensions in R54 scripts)
 **Study range:** R53 (generations), R54 (compound modes, nuclei, α), R55 (Ma-S derivation, framed)
 **Supersedes:** [model-D](model-D.md)
@@ -143,7 +143,7 @@ Cross-shears: σ₄₅ = −0.18, σ₄₆ = +0.10 (soft, neutron region).
 | ν₂ | 3.05 × 10⁻⁸ | (0, 0, −1, 1, 0, 0) | predicted | stable ✓ |
 | ν₃ | 5.82 × 10⁻⁸ | (0, 0, 1, 2, 0, 0) | predicted | stable ✓ |
 | electron | 0.511 | (1, 2, 0, 0, 0, 0) | input | stable ✓ |
-| proton | 938.3 | (0, 0, −2, 2, 1, 3) | input | stable ✓ |
+| proton | 938.3 | (0, 0, 0, 0, 1, 3) | input | stable ✓ |
 | neutron | 939.6 | (0, −4, −1, 2, 0, −3) | 0.07% | near-miss ✓ |
 | muon | 105.7 | (1, 1, −2, −2, 0, 0) | 0.83% | near-miss ✓ |
 | tau | 1776.9 | (3, −6, 2, −2, 2, 3) | 0.05% | near-miss ✓ |

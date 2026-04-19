@@ -132,18 +132,75 @@ to the 1.3 MeV p→n threshold without spatial collision.
 Companion to L04 (THz neutrino experiment) and L02 (threshold
 nuclear loading).
 
-### R59. Self-consistent metric with time  **Framed**
+### R59. Self-consistent metric with time  **Complete**
 **Study:** [`R59-clifford-torus/`](R59-clifford-torus/)
 **Type:** theoretical + compute + visualization
 **Depends on:** R55, R54, R53, sim-impedance, GRID
 
-Embed Ma sheets as Clifford tori in 4D (not 3D).  Resolves
-self-intersection, metric saturation, and inner/outer asymmetry.
-Tests whether signed curvature in 4D provides the mechanism for
-EM attraction/repulsion (opposite windings → geodesic convergence,
-same windings → divergence).  5 tracks: Clifford metric, signed
-curvature, Lorentzian 4+1D with time, particle spectrum, and
-Coulomb law from geodesics.
+Tested whether adding time to the Ma metric produces α via
+Kaluza–Klein coupling on 10D/11D architectures.  Ten tracks
+completed.  Negative on the original claim (direct Ma-t on
+model-E, ring-based ℵ mediation, direct Ma-t on a clean metric
+all fail to reach α at the spatial level).  Positive on a spinout
+architecture: **tube↔ℵ↔t on a clean Ma metric** gives exact
+structural universality (α_e = α_p by |n_tube| = 1) and reaches
+α at a natural-form parameter point (k = 1/(8π), g_aa = 1,
+σ_at = 4πα, σ_ta = √α) within 60 ppm (F59).  Model-E's internal
+shears (s_e = 2.004) saturate the e-tube and block this
+architecture on model-E geometry (F41) — R60 is scoped to find
+whether a modified spectrum mechanism can coexist with it.
+
+### R60. Metric-11 — particle spectrum on R59's α-derivable 11D architecture  **Complete — Tracks 1–14; model-F promoted**
+**Study:** [`R60-metric-11/`](R60-metric-11/)
+**Type:** theoretical + compute
+**Depends on:** R59, R53, R49, R54, R61, model-E
+
+Can a metric configuration be found that simultaneously implements
+R59's α architecture and reproduces the model-E particle spectrum?
+
+Tracks 1–4 built solver infrastructure (F1–F4), mapped the
+e-sheet (F5–F10) and p-sheet (F11–F16) viability regions, and
+discovered that per-sheet diagonal compensation (k_e ≠ k_p)
+rescues α universality+magnitude in 66% of (ε, s) configurations
+(F17–F21).  Track 5 derived the α-decoupling locus in closed
+form: `Q = 0 ⟺ n_r/n_t = sε + 1/(sε)` (F22); (1,1) modes never
+decouple, (1,2) modes decouple at sε = 1, (1,3) modes at
+sε ≈ 0.382 or 2.618.  Track 5 Part 1 confirmed wide proton
+viability under shearless electron (F23–F26).
+
+Track 6 added the ν-sheet on equal footing (sign_nu = +1, σ_ta
+coupling, free k_ν).  **Joint e+p+ν solver converges cleanly at
+g_aa = 1 with α_e = α_p = α_ν₁ = α universality** for three of
+four R61 ν-sheet candidates (F27–F31).  k values cluster within
+20% of R59 F59 natural value for charged sheets; per-sheet L
+scales span 10+ orders of magnitude (L_p = 19 fm, L_ν = 2×10¹¹
+fm) consistent with mass hierarchy.  **R60's full architecture
+is now validated** as compatible with the model-E three-sheet
+foundation.
+
+Track 7 added ring↔ℵ structural cancellation σ_ra = (sε)·σ_ta
+per sheet.  Mode-dependence on ν collapsed from 28% to 0%.
+Tracks 7b–7d re-solved with the fix across shearless/magic-shear
+geometries — all produced the same emergent single-k symmetry
+k = 0.04696 = 1.1803/(8π).  Track 7c found most cross-sheet σ
+entries break α universality (pool item **h**).
+
+Track 8 found compound α exactly quantized:
+`α/α = (n_et − n_pt + n_νt)²`.  On the Track 7d baseline,
+tau and neutron land cleanly but muon is blocked by mass desert.
+
+**Tracks 8b + 9 revival:** confirmed σ_ra lifts Track 2's
+signature bound (tested up to sε = 2000), then re-solved with
+e-sheet at model-E extreme values (ε=397, s=2.004).  Single-k
+symmetry survives even sε ≈ 800.  **Muon at model-E's tuple
+(1,1,−2,−2,0,0) lands at 104.78 MeV — 0.83% off, identical to
+model-E's own accuracy.**  Tau and neutron at alternate tuples
+within 0.2%.  All α universal, ν predictions intact, Δm² ratio
+= 33.59.  R53's generation resonance mechanism working on R60's
+augmented architecture.
+
+Recommended next: Track 10 — broader hadron inventory (Σ, Λ,
+Ξ, Ω, K, π, η, ρ, φ) on this baseline.
 
 ### R55. α consistency — Ma-S coupling derivation  **Tracks 1,3 done; Track 4 paused**
 **Study:** [`R55-alpha-consistency/`](R55-alpha-consistency/)

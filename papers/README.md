@@ -22,19 +22,32 @@ predictions, start here:
    model with one free parameter.  Accessible to any reader;
    no equations.
 
-2. **[Matter from Light: A Geometric Particle Spectrum](white-paper.md)**
+2. **[Good Unification Theory](gut.md)** — The arc in one
+   read.  How the framework sits alongside Einstein, Kaluza,
+   and the Standard Model: what it unifies, what it leaves
+   open, and why *Good* instead of *Grand*.  About ten
+   minutes.  A natural follow-up to *What If?* before
+   diving into the white paper.
+
+3. **[Matter from Light: A Geometric Particle Spectrum](white-paper.md)**
    — The white paper.  Full model-E spectrum (18 of 20
    spin-correct modes, 2 resonances), T⁶ geometry, three
    generations from shear resonance, nuclear scaling, and
    open problems.  Start here for the current state of the
    science.
 
-3. **[Matter from Light](matter-from-light.md)** — The
+4. **[Derivations — From Photon to Particle](derivations.md)**
+   — The formal foundation.  Roadmap and index for the
+   analytical derivations (R62) that prove MaSt's postulates
+   from SR + E = hf + compact geometry.  Links to all
+   completed and planned derivations.
+
+5. **[Matter from Light](matter-from-light.md)** — The
    particle model in narrative form.  How confined photons
    on compact geometry produce mass, charge, spin, and the
    particle spectrum.  (Paper 1 of the technical series.)
 
-4. **[The Ghost in the Machine](dark-matter.md)** — Dark
+5. **[The Ghost in the Machine](dark-matter.md)** — Dark
    matter as the uncharged majority of the same standing
    waves that produce visible particles.
 
@@ -90,6 +103,7 @@ depend on it — and the science does not depend on them.
 | File | Title | Status |
 |------|-------|--------|
 | `whatif.md` | What If? | Draft |
+| `gut.md` | Good Unification Theory | Draft |
 | `symbols.md` | A Light Descent into Symbols | Draft |
 | `little-balls.md` | Little Balls of Light | Draft |
 | `matter-from-light.md` | Matter from Light and Geometry | Draft (paper 1 of 3) |
@@ -98,6 +112,7 @@ depend on it — and the science does not depend on them.
 | `dark-matter.md` | The Ghost in the Machine | Draft |
 | `neutrino-domain-storage.md` | The Neutrino-Domain Memory | Outline (companion to sub-quantum-memory) |
 | `universe-as-mode.md` | The Universe as a Mode | Outline (thought piece) |
+| `derivations.md` | Derivations — From Photon to Particle | In progress (roadmap + index for R62 derivation chain) |
 | `white-paper.md` | Matter from Light: A Geometric Particle Spectrum | Draft |
 | `signature.md` | 137: The Divine Signature | Draft |
 | `ancients.md` | Ancient Geometric Structure: Genesis and the GRID+MaSt Hierarchy | Outline |
