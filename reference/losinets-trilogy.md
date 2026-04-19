@@ -122,7 +122,7 @@ Losinets reads the failure ladder as diagnostic: each unit of strangeness introd
 | **Substrate** | Discrete 4D causal Planck lattice with U(1) phase; axioms give Maxwell, G, charge quantisation; α as input | Continuum incompressible K–V vacuum (ρ₀, η₀, G); vortex-ring medium gives Maxwell exactly | Assumed smooth 5-manifold M⁴ × M_a; Maxwell + α taken as inputs |
 | **Free photon** | Propagating link-state disturbance (gauge field) | Vortex ring with finite ρ(ω), core r₀, continuous polarisation (a, b) | Plane-wave excitation of the ambient EM field (no intrinsic size) |
 | **Confined photon** | — | — (not addressed) | Photon wrapped on M_a as a T⁶ standing wave; mass = eigenfrequency |
-| **Compound particles** | — | Two-zone Hill vortex (nucleons); ring assemblies (hyperons, partial) | Multi-winding T⁶ modes across e-, ν-, p-sheets |
+| **Compound particles** | — | Irrotational mantle at ~1.3 fm as K-V elastic wake of the charged core (hypothesis, R61) | Rotational core from T⁶ eigenmode amplitude at ~0.4 fm (R60 result; complementary to Losinets mantle, not equivalent to his two-zone picture) |
 | **Charge mechanism** | Topological phase winding on the lattice; e = √(4πα) | Circulation invariant Q = ρ₀·r₀·Γ (K–V units); SI via R | Tube-winding integer, Q = −n₁ + n₅ from Ma–S coupling sign |
 | **Single dial** | α (dimensionless) | R = τ_KV = η₀/G = ν₀/c² (time) | α (dimensionless, inherited from GRID) |
 
@@ -167,15 +167,21 @@ One candidate mechanism: spin-½ in MaSt may be a pair property (two half-windin
 
 ## Cross-check targets (the punch list)
 
-### C1. Hofstadter two-scale structure (strongest concrete target)
+### C1. Hofstadter two-scale structure — kinematic projection (resolved by R60)
 
-Losinets derives r_m/r_c ≈ 5.2 parameter-free from equal-charge + Hill two-zone structure. MaSt's p-sheet has L₅ = 2.45 fm (tube circumference) and L₆ = 4.45 fm (ring circumference). Neither ratio nor the individual scales alone reproduce r_c = 0.25 fm and r_m = 1.3 fm directly. But after a projection of the proton mode (0, 0, −2, 2, 1, 3) onto a 3D radial charge density, one should ask:
+R60 projected the proton mode (0, 0, −2, 2, 1, 3) onto 3D radial charge density under twelve (density × projection) combinations. Result: best ratio 1.77, all physically plausible variants clustered in [1.3, 1.8]; inner scale bottoms at 0.39 fm, never reaches 0.25 fm. The kinematic equivalence **fails**. Root cause: only two physical scales enter the Hofstadter window — L₅ = 2.45 fm and L₆ = 4.45 fm — and no integer-winding geometric operation on them bridges the factor-of-3 gap from 1.82 to 5.2.
 
-- Does the projection exhibit two characteristic scales?
-- Is the ratio close to 5?
-- Do the absolute scales match 0.25 fm and 1.3 fm?
+See `studies/R60-losinets-projection/findings.md`.
 
-A yes on all three would be a substantive three-way agreement between Losinets (two zones from equal-charge ansatz), MaSt (two scales from T⁶ projection), and Hofstadter (two scales measured directly). A clear no on any one of them falsifies the equivalence at the compound-particle layer.
+### C1′. Dynamical mantle as K-V elastic wake (live, R61 in flight)
+
+R60's Interpretation 2 — promoted to the active cross-check target. The MaSt T⁶ eigenmode supplies the **rotational core** (hard structure at ~0.4 fm). Losinets's **irrotational-but-circulating mantle** at ~1.3 fm is the K-V elastic wake of that charged core in the surrounding medium, not a feature of the T⁶ eigenmode amplitude. This tracks the core/mantle distinction Losinets himself draws (rotational vs irrotational-but-circulating) and makes the two frameworks **complementary**, not redundant, at the compound-particle layer.
+
+Numerical target: compute the K-V exterior field around a Hill-type core of radius ≈ 0.25–0.4 fm using Losinets's linearised EfD equations, identify the characteristic wake scale, and check whether ~1.3 fm drops out without free parameters. A tentative lead: an energy-threshold cutoff of the exterior Hill flow at η ≈ 0.01 gives r_mantle = r_core · η^(−1/4) ≈ 3.16·r_core, which for r_core = 0.4 fm lands at 1.26 fm. The full calculation will confirm or falsify.
+
+If the wake scale drops out: MaSt gives the eigenmode, Losinets gives the surrounding field response, Hofstadter measures the sum — the cleanest three-way agreement available at this layer, and a deliverable suitable for sending to Losinets in his own language.
+
+See `tickets/implement/4-losinets-mantle-as-kv-wake.md`.
 
 **Status (R60, 2026-04):** tested — **fails at the kinematic level**. All twelve (density × projection) combinations produce two scales, but the ratios cluster in [1.3, 1.8] near the raw p-sheet ratio L₆/L₅ ≈ 1.82, never reaching 4.0. Only Fourier-form-factor projections deliver an outer scale near 1.3 fm (matching r_m), but the partnering inner scale sits at ~0.95 fm rather than ~0.25 fm, so the ratio is wrong. The result points to the Hofstadter mantle being dynamical (self-field / K–V elastic wake) rather than part of the T⁶ eigenmode amplitude, and constrains R55: a purely local Ma-S rescaling of the p-sheet cannot generate the 5.2 ratio; a second physical-space scale must enter. Full report: [R60 findings](../studies/R60-losinets-projection/findings.md).
 
