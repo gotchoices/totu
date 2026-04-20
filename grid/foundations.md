@@ -299,6 +299,29 @@ they are connected by a consistency condition (e.g. a Nyquist-like
 constraint matching resolution to signal bandwidth), which would
 reduce the free parameters to one.  This is noted but not assumed.
 
+**Q2b. Are α and Losinets's R related?**
+
+Losinets's K–V continuum theory has one electromagnetic input,
+the relaxation time R = η₀/G = ν₀/c² (units: seconds).  GRID's
+α (dimensionless) and Losinets's R (a time) are the natural
+candidates for a one-dial-to-one-dial bridge.
+
+**Short answer: no, unless Losinets's photon §2.4 open problem is
+solved.**  Direct algebra using the EfD §7.4 K–V correspondence
+gives α = π·ρ₀·r₀²·ℏ / (m_vac²·c), in which R does not appear at
+all — α depends on the substrate parameters (ρ₀, r₀, m_vac) and
+universal constants.  R lives on an orthogonal axis of the K–V
+parameter space; it sets dissipation and the SI-unit conversion
+A = R·u, but cancels from the dimensionless coupling.
+
+A conditional bridge α ∝ r₀² / (ρ₀·R⁶·c⁷) emerges *if* the
+Losinets ring-energy closure (m_vac in terms of c, G, ν₀) is
+ever solved, but introduces r₀ as a second knob.  See
+[`losinets/alpha-vs-R.md`](alpha-vs-R.md) for the full derivation,
+dimensional audits, and a corrected Planck-scale estimate
+R ≈ t_P (the trilogy's earlier "≈ 1.5 × 10⁻¹²⁶ s" guess was
+a unit-mixing error).
+
 **Q3. Does the lattice require 4 dimensions?**
 
 Axiom A1 asserts 4D.  Could a self-consistent causal lattice with

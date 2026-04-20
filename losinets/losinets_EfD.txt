@@ -1,0 +1,1224 @@
+Maxwell's Equations from Vortex Mechanics:
+            A Kelvin­Voigt Analogy
+
+                            Dmitry Losinets
+                               March 2026
+
+                                                  Abstract
+
+    We establish a formal mechanical analogy for Maxwell's equations using compact
+vortex structures in a Kelvin­Voigt viscoelastic medium. The shear modulus G =
+2/(4r02) is set by the collective Tkachenko mechanism (Biot­Savart back-reaction
+among vortex rings); Hill-vortex shape stability keeps each core compact at radius
+r0. The Kelvin­Voigt constitutive law yields the damped shear-wave equation for the
+vector potential; incompressibility (K/G  ) uniquely fixes the Coulomb gauge
+ · A = 0. All four Maxwell equations follow with localised sources; in the far field
+(  0) the viscous current vanishes and the exact vacuum equations are recovered.
+Electric charge is identified with the circulation invariant Q = 0r0; the conversion
+constant R = KV = 0/G is a directly measurable mechanical quantity. The model is
+valid for   /(cL)  1 and reproduces Coulomb's law in the static limit.
+
+Contents
+
+1 Introduction                                                                        4
+
+1.1 Motivation: reducing electrodynamics to mechanics . . . . . . . . . . . . . . 4
+
+1.2 The central difficulty and our resolution . . . . . . . . . . . . . . . . . . . . 4
+
+1.3 Previous work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+1.4 Structure of the paper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+2 Vortex Dynamics as a Kelvin­Voigt Medium                                            5
+
+2.1 Elastic restoring force of a compact vortex core . . . . . . . . . . . . . . . . 5
+
+2.2 Kelvin­Voigt constitutive law for the exterior medium . . . . . . . . . . . . . 7
+
+2.3 Characteristic wave speed and connection to quantum fluids . . . . . . . . . 8
+
+3 Mathematical Framework                                                              8
+
+3.1 Governing equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+3.2 Regime of validity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+3.3 Core­exterior decomposition . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+3.4 Helmholtz decomposition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+                          1
+4 Field Mappings and Potentials                           10
+
+4.1 Identification from the Lorentz force structure . . . . . . . . . . . . . . . . . 10
+
+4.2 Potential definitions and the conversion constant R . . . . . . . . . . . . . . 10
+
+4.3 Wave equation for the vector potential (K­V derivation) . . . . . . . . . . . 11
+
+4.4 Poisson equation for the scalar potential . . . . . . . . . . . . . . . . . . . . 11
+
+4.5 Coulomb gauge condition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+4.6 Value of R and its mechanical interpretation . . . . . . . . . . . . . . . . . . 12
+
+5 Charge as Mass-Normalised Circulation                   12
+
+5.1 Vortex tube and the circulation invariant . . . . . . . . . . . . . . . . . . . . 12
+
+5.2 Definition of the hydrodynamic charge . . . . . . . . . . . . . . . . . . . . . 12
+
+5.3 Quantisation of circulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+5.4 Localised charge density . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+6 Formal Correspondence with Maxwell's Equations          13
+
+6.1 (II) Gauss law for magnetism . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+6.2 (III) Faraday's induction law . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+6.3 (IV) Amp`ere­Maxwell law . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+6.4 (I) Gauss law . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+7 Physical Interpretation of Constants and Fields         15
+
+7.1 The conversion constant R = KV . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+7.2 Dimensional consistency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+7.3 Energy flux: Poynting vector analogue . . . . . . . . . . . . . . . . . . . . . 15
+
+7.4 Complete correspondence table . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+8 Stationary Limit and Coulomb Law                        16
+
+8.1 Electrostatic reduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+
+8.2 Total charge and flux representation . . . . . . . . . . . . . . . . . . . . . . . 16
+
+8.3 Point-source solution and 1/r field . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+8.4 Force between two stationary vortex charges . . . . . . . . . . . . . . . . . . 17
+
+9 Limitations and Scope                                   17
+
+10 Possible Experimental Tests                            17
+
+11 Conclusion                                             18
+
+A Kelvin­Voigt vs. Maxwell viscoelastic closures          19
+
+B Order-of-magnitude estimate of the effective current    20
+
+C Derivation of the Lorentz-like force structure          20
+
+D Incompressible K­V equations and Poisson equation for   20
+
+E Core­exterior decomposition via indicator function      21
+
+                                    2
+F Hill-vortex shape-mode shear modulus  22
+
+3
+1 Introduction
+
+1.1 Motivation: reducing electrodynamics to mechanics
+
+The question of whether electromagnetic phenomena admit a mechanical interpretation has
+been central to theoretical physics since Faraday. Maxwell himself, in his 1861 paper "On
+Physical Lines of Force" [7], modelled the magnetic field as a system of rotating vortex
+cells in a mechanical medium, with idle wheels transmitting the electric force between them.
+Helmholtz [5] had just demonstrated that vortex filaments in an ideal fluid obey far-reaching
+conservation laws; the structural analogy between vortex tubes and magnetic field lines was
+a central intuition for both Maxwell and Kelvin [9].
+
+    Although the programme of mechanical ether models was eventually abandoned in favour
+of the abstract field-theoretic formulation as codified by Heaviside [8] and its successors, the
+search for hydrodynamic analogues of Maxwell's equations remains scientifically valuable for
+several reasons:
+
+    · Heuristic and pedagogical value. A concrete mechanical picture provides physi-
+       cal intuition complementary to the abstract formalism. Well-constructed mechanical
+       analogies guide the search for solutions and generalisations that may not be visible
+       from the field-theoretic perspective alone.
+
+    · Superfluid and quantum-fluid analogies. Quantised vortex dynamics in superfluid
+       helium and Bose­Einstein condensates (BEC) provides a laboratory for field-theoretic
+       phenomena at accessible energies [27]. The circulation quantisation  = nh/m mirrors
+       the discreteness of electric charge; the phonon spectrum has the linear (photon-like)
+       dispersion  = csk at long wavelengths. Formalising this correspondence suggests
+       concrete experiments and motivates new theoretical connections.
+
+    · Hypothesis generation. A structural isomorphism between vortex mechanics and
+       electrodynamics constrains models of the physical vacuum and suggests mechanisms
+       that are difficult to access from standard field theory.
+
+    This paper is purely formal: we establish a mathematical isomorphism between the
+equations of a specific mechanical model and Maxwell's equations. No ontological claim is
+made that electromagnetism is mechanical.
+
+1.2 The central difficulty and our resolution
+
+The principal difficulty in constructing a hydrodynamic analogue of Maxwell's equations is
+the magnetic sector : Maxwell's equations admit electromagnetic waves propagating at finite
+speed c, whereas the vorticity equation in a Newtonian fluid,
+
+t = 2,                                         (1)
+
+is purely diffusive. Previous constructions have addressed this difficulty in various ways:
+some introduce a hyperbolic closure by hand without mechanical justification, while oth-
+ers restrict to irrotational or steady-state limits where the general incompatibility is not
+resolved [13, 16, 17].
+
+4
+    Our resolution is to replace the Newtonian constitutive model with the Kelvin­Voigt
+viscoelastic model, motivated by a concrete mechanical property of vortex rings: a com-
+pact vortex core (Hill-type solution) maintains its shape via pressure balance. When de-
+formed, it experiences a restoring force proportional to the displacement-- an elastic re-
+sponse. This endows the exterior vortex-ring medium with a finite shear modulus G, turning
+the purely diffusive NS medium into a wave-supporting K­V solid. The damped shear-wave
+equation then follows as an exact consequence of the constitutive law, with no ad-hoc as-
+sumption.
+
+1.3 Previous work
+
+Formal fluid­EM analogies appear in [12, 13, 14, 16, 17, 10]. Moffatt [15] studied magnetostatic­
+Euler-flow analogies. Darrigol [11] and Bokulich [10] provide historical accounts of the
+Helmholtz­Maxwell analogy. The present work distinguishes itself by deriving the hyper-
+bolic wave behaviour from the Kelvin­Voigt constitutive law, which is itself justified by the
+elastic stiffness of compact vortex cores.
+
+1.4 Structure of the paper
+
+Section 2 develops the physical basis (vortex core elasticity, K­V constitutive model). Sec-
+tion 3 sets up the mathematical framework (governing equations, regime of validity, de-
+compositions). Section 4 establishes the field mappings, potentials, wave equations, and
+Coulomb gauge condition. Section 5 defines charge as a circulation invariant. Section 6
+presents the full formal correspondence with Maxwell's equations. Section 7 interprets all
+constants and fields. Section 8 establishes the Coulomb law analogue. Section 9 discusses
+limitations, Sec. 10 proposes experimental tests, and Sec. 11 concludes.
+
+2 Vortex Dynamics as a Kelvin­Voigt Medium
+
+2.1 Elastic restoring force of a compact vortex core
+
+Consider a compact translating vortex of the type found by Hill [1] (see also [2, 4, 3]):
+
+a spherical region of radius r0 containing a vortex structure that propagates at constant
+speed without change of shape. Stability arises from a precise balance between the interior
+
+vorticity-induced pressure and the exterior irrotational pressure.
+
+    When this equilibrium is perturbed by a small displacement d with |d|  r0, the changed
+Biot­Savart interaction modifies the internal pressure distribution. The self-induced velocity
+
+scale is Uind  /r0, and the pressure perturbation induced by a displacement |d| is p 
+Ui2nd |d|/r0. The volumetric restoring force is therefore
+
+p 2     |d|                                                         2
+felastic  r0  r04 |d| = Gvortex r02 ,  Gvortex  r02 .                  (2)
+
+This is the constitutive signature of a material with shear modulus Gvortex. The elastic
+response of the vortex is not an additional assumption: it is a consequence of the pressure-
+
+balance mechanism that sustains the vortex structure. The stability structure of vortex rings
+
+     5
+and their perturbation theory is treated in [3, 4]; a precise derivation of G(, r0, ) from vortex
+deformation modes remains an open problem (see Sec. 9). The order-of-magnitude estimate
+(2) is sufficient for establishing the analogy.
+
+d
+
+felastic               r_0
+
+Figure 1: Compact Hill-type vortex core and its elastic restoring force. A small displacement
+
+d from the equilibrium shape produces a restoring force with effective shear modulus G 
+2/r02 (2), establishing the K­V elastic character of the medium.
+
+Two contributions to G: shape stability and collective elasticity. The estimate (2)
+gives the correct scaling, but the physical origin of G in the exterior medium warrants sharper
+identification. A single free vortex ring in an unbounded ideal fluid undergoes steady trans-
+lation without a restoring force for rigid-body displacement: Kelvin's circulation theorem
+preserves  but does not oppose the displacement. Two distinct mechanisms therefore con-
+tribute to G:
+
+1. Shape stability (intra-vortex). The Hill vortex pressure balance stabilises the core
+   shape: deformation modes (  2) are opposed by a restoring force, keeping the core
+   compact at radius r0. The exact prefactor is derived in Appendix F via a pressure-jump
+   method (linearised Bernoulli, no PDE required):
+
+            272        Gshape = 108  1.94.  (3)
+Gshape = 175 r02 ,     GTk  175
+
+The two contributions are comparable; the shape term is approximately twice the
+Tkachenko term.
+
+2. Collective elasticity (inter-vortex, Tkachenko mechanism). In the dilute assembly
+   of vortex rings constituting the K­V exterior medium, displacing one ring changes
+
+                    6
+the Biot­Savart velocity field experienced by its neighbours; this back-reaction is the
+
+dominant source of G. For a regular 2-D lattice of vortices with superfluid density s,
+quantised circulation , and areal vortex density n, Tkachenko [18] derived the exact
+
+shear modulus                                             s 2     n
+                                                            4       .
+                                                 GTk  =                                                 (4)
+
+For mean vortex spacing  r0 (i.e. n  r0-2):
+
+                                                               2                                        (5)
+                                                 GTk = 4r02 ,
+
+confirming scaling (2) with the explicit prefactor 1/(4). This result has been confirmed
+by subsequent analyses of vortex-lattice dynamics in rotating superfluids [19].
+
+Both contributions are now explicitly determined; their sum is the total effective shear
+
+modulus:                                         2 1 27                      0.234 2
+
+                          G = GTk + Gshape = r02              +                 r02     .               (6)
+                                                          4 175
+
+Throughout this paper G  2/r02 denotes this combined scaling.
+
+2.2 Kelvin­Voigt constitutive law for the exterior medium
+
+In the exterior region (r  r0), the medium is modelled as a dilute assembly of vortex rings,
+each contributing elastic restoring forces together with viscous dissipation. The effective
+constitutive relation for the deviatoric stress is the Kelvin­Voigt (K­V) viscoelastic law [6]:
+
+                                       = 2G E(d) + 20 D(u),                                             (7)
+
+where    d  is  the  displacement  field,  u  =  td  the  velocity,    E  =  1  (d   +  (d)T)    the    linearised
+                                                                             2
+                1         (u)T)
+strain,  D  =   2  (u  +         the  strain-rate    tensor,  G  >  0  the   effective  elastic  shear  modulus,
+
+and 0 = 0 the dynamic viscosity.
+
+The two terms have distinct physical origins:
+
+· The elastic term 2GE encodes the restoring force from vortex-core pressure balance,
+  with G of order 2/r02 as estimated in (2).
+
+· The viscous term 20D is the standard Newtonian contribution of the underlying fluid.
+
+The pure Navier­Stokes (Newtonian) model is recovered by setting G = 0. The Kelvin­
+
+Voigt relaxation time is                                  0 .
+                                                          G
+                                                 KV  =                                                  (8)
+
+                                                      7
+           G
+           0
+
+Figure 2: Kelvin­Voigt rheological model: spring (G, elasticity) in parallel with viscous
+dashpot (0). The relaxation time is KV = 0/G = R.
+
+2.3 Characteristic wave speed and connection to quantum fluids
+
+The shear-wave speed of the K­V medium is
+
+           c  G/0.         (9)
+
+For a vortex network with quantum circulation  = h/m and core spacing r0, the estimate
+G  2/r02 gives c  /r0. This is consistent with the Bogoliubov phonon speed of a
+BEC [22, 24, 25], cs = gn0/m (where g is the coupling constant and n0 the condensate
+density), confirming that the K­V model captures the correct long-wavelength wave physics
+
+of quantum fluids.
+
+    In the analogy, c plays the role of the speed of light: it sets the wave-transit time scale
+
+for exterior fields, and it is determined by the elastic properties of the vortex network rather
+
+than being a free parameter.
+
+3 Mathematical Framework
+
+3.1 Governing equations
+
+In the compact core region, the medium is governed by the full Navier­Stokes equations. In
+the exterior region, we adopt the incompressible linearised K­V equations:
+
+ · u = 0,                  (10)
+
+0 ttu = -tp + G2u + 02tu,  (11)
+
+where p = p - p0 is the pressure perturbation acting as a Lagrange multiplier that enforces
+the constraint (10). These follow from the K­V constitutive law (7) by inserting into the
+linearised momentum balance 0tu =  ·  and differentiating with respect to t, then
+projecting onto the divergence-free subspace.
+
+    The incompressible limit is justified physically by taking the compressional (longitudinal)
+wave speed cP  , so that acoustic compression adjusts instantaneously and the only
+remaining wave mode is the shear wave at c = G/0. Within the K­V constitutive
+framework this is equivalent to K/G   at fixed G (i.e. the bulk modulus K   while
+
+           8
+the shear modulus G remains finite), or equivalently Poisson's ratio P    1  .  The shear
+                                                                          2
+
+speed c is therefore unambiguously defined without any constraint on the Lam´e moduli, and
+
+a single-speed electromagnetic analogy follows without additional assumptions. Taking the
+
+divergence of (11) with (10) gives the Poisson equation
+
+                                    2p = 0                                      (12)
+
+in the source-free exterior, so pressure is a harmonic function determined by boundary con-
+ditions at the core surface. The K­V elastic term G2d acts only on the solenoidal displace-
+
+ment field and does not generate longitudinal modes.
+
+3.2 Regime of validity
+
+Let r0 be the core radius and L the exterior observation scale. Define the dimensionless
+
+parameters                  c r0 ,   = r0 ,   =  = KV .
+                                         L        cL L/c
+            Rec          =                                                      (13)
+
+The model is valid when
+
+                         Rec  1,   1,   1.                                      (14)
+
+These conditions ensure respectively: (i) core-scale dynamics are elastic-dominated, with
+viscous effects small within the core (Rec  1); (ii) the core is compact and exterior fields
+vary on scale L  r0 (  1); (iii) the wave-dominated regime holds: viscous relaxation
+(KV = R) is fast compared to the wave-transit time L/c, so  is conserved to O() by
+Kelvin's theorem (  1).
+
+3.3 Core­exterior decomposition
+
+We introduce a smooth cutoff function (r)  [0, 1] with   1 in the core 0 and   0
+in the far exterior (see Appendix E). All source densities (, j) contain factors of , , or
+2, and vanish in the far field.
+
+3.4 Helmholtz decomposition
+
+The incompressibility constraint (10) means the exterior velocity field is purely solenoidal :
+ · u = 0 everywhere in the exterior. In the Helmholtz decomposition
+
+            u = uir + usol,  × uir = 0,  · usol = 0,                            (15)
+
+the irrotational part uir is a potential flow satisfying 2ir = 0 (no sources in the exterior); its
+role is captured by the scalar potential  via the Poisson equation (Sec. 4.4). The solenoidal
+part usol carries vorticity and maps to the vector potential A = Rusol, which is therefore
+exactly solenoidal:  · A = 0 (Coulomb gauge).
+
+                                    9
+                                    0
+
+                                                                0
+                                                    0
+
+Figure 3: Core­exterior decomposition with smooth indicator function . Sources  and j
+are confined to the core and its transition layer. The far field is governed by the source-free
+Maxwell equations.
+
+4 Field Mappings and Potentials
+
+4.1 Identification from the Lorentz force structure
+
+Using  the  Lamb  vector  identity  (u ·  )u   =    1  u2   -u×      (with    =   × u),  the  exterior
+                                                    2
+Euler equation 0(tu + (u · )u) = -p becomes
+
+                          0 tu +          p +       1  0u2  = 0 u × .                         (16)
+                                                    2
+
+The right-hand side is the Lamb force density. Comparing with the Lorentz force density
+f = (E + u × B) suggests the identifications
+
+                  B   =  × u,                    E  -tu -            p u2
+                                                                        +     .               (17)
+                                                                     0 2
+
+In the linearised exterior (|u|  c), the quadratic term (u2/2) is second order and absorbed
+into the scalar potential at leading order, giving E  -tu - p/0. These match the
+standard potential form E = - - tA and B =  × A with   p/0 and A  u. The
+
+full derivation using the Lamb identity is given in Appendix C.
+
+4.2 Potential definitions and the conversion constant R
+
+We introduce the electromagnetic potentials via a conversion factor R (dimension: time):
+
+                                              p
+                                      R , A  R u.                                             (18)
+                                          0
+
+The electric and magnetic fields are then
+
+            E  - - tA = -R                p         tu             B   × A = R  × u.
+                                                 +      ,                                     (19)
+                                            0
+
+                                                    10
+Note that B = R  × u = R depends only on the solenoidal part usol, since  × uir = 0 by
+definition. The irrotational component of u enters  and is linked to A through the Coulomb
+gauge condition (26). The specific value of R is fixed in Sec. 4.6 below.
+
+4.3 Wave equation for the vector potential (K­V derivation)
+
+For the solenoidal displacement dsol with  · dsol = 0, the irrotational pressure gradient
+projects to zero in the solenoidal sector, so the K­V constitutive law (7) inserted into the
+linearised momentum balance gives
+
+                0 ttdsol = G 2dsol + 0 2tdsol.                    (20)
+
+Differentiating with respect to t and substituting usol = tdsol:
+
+                0 ttusol = G 2usol + 0 2tusol.                    (21)
+
+Dividing by 0 with c = G/0 and  = 0/0:
+
+                ttusol - c22usol = 2tusol.                        (22)
+
+Since u is purely solenoidal in the incompressible exterior, the vector potential A = Ru is
+entirely solenoidal and satisfies the same wave equation exactly:
+
+                ttA - c22A = 2tA.                                 (23)
+
+This is an exact consequence of the K­V constitutive model (7) for the solenoidal velocity
+field--not an independent hypothesis. No decomposition into transverse and longitudinal
+parts is necessary: the Coulomb gauge  · A = 0 holds identically.
+
+4.4 Poisson equation for the scalar potential
+
+Since 2p = 0 in the source-free exterior (12), the scalar potential   R p/0 satisfies
+
+                2 = 0                                             (24)
+
+there. Near the core (where the -split introduces source terms), this becomes the Poisson
+
+equation
+
+                -02 = ,                                           (25)
+
+which is derived from Gauss's law in Sec. 6 and Appendix D. The scalar potential propagates
+
+instantaneously (elliptic equation) rather than as a wave; this is characteristic of Coulomb
+
+gauge and is gauge-equivalent to the Lorenz-gauge wave equation--all physical observables
+
+are identical.
+
+4.5 Coulomb gauge condition
+
+The definition A = Ru together with the incompressibility constraint (10) immediately gives
+
+                 · A = R  · u = 0.                                (26)
+
+This is the Coulomb gauge condition, here derived as an exact consequence of incompress-
+ibility--not imposed by hand. The scalar potential is then determined by the instantaneous
+Poisson equation (25), as in standard Coulomb-gauge electrostatics.
+
+                             11
+Gauge equivalence. The Coulomb gauge and the Lorenz gauge  · A + (1/c2)t = 0
+are physically equivalent: they are related by a gauge transformation and all observable
+fields E, B are identical. The incompressible K­V medium naturally selects Coulomb gauge;
+the Lorenz condition would instead emerge from a compressible barotropic closure (see Ap-
+pendix D for comparison).
+
+4.6 Value of R and its mechanical interpretation
+
+Dimensional consistency requires [] = [E] · m and [A] = [B] · m, which with (18) gives
+[R] = s. The unique choice that makes the wave equation for A (23) hold with the same c
+and  as (22) is
+
+R                                      =  0/0  =  0  =  KV.    (27)
+     c2                                   G/0     G
+
+The conversion constant R is the Kelvin­Voigt mechanical relaxation time of the
+exterior medium. It is not a free parameter: it is determined by the ratio of the fluid
+viscosity to the vortex-network elastic modulus. The regime  = /(cL) = R/(L/c)  1
+is then simply the requirement that the medium relaxes faster than the wave traverses the
+observation scale.
+
+5 Charge as Mass-Normalised Circulation
+
+5.1 Vortex tube and the circulation invariant
+
+Let 0 be a compact toroidal vortex core with axis e and core radius r0. The vorticity
+ =  × u forms a vortex tube T linked with 0. The standard circulation over any
+admissible loop C encircling T once is
+
+  u · dl =                                              · dS.  (28)
+
+   C                                           S: S=C
+
+By Kelvin's circulation theorem,  is invariant in the inviscid limit, with O() corrections
+in the weakly viscous regime.
+
+5.2 Definition of the hydrodynamic charge
+
+The hydrodynamic charge is defined as
+
+                                       Q  0 r0 ,               (29)
+
+where  = r0 is the vortex core radius--the intrinsic length scale of the compact core. The
+sign of Q is fixed by the right-hand rule orientation of C relative to e.
+
+    The choice  = r0 is natural: it makes Q proportional to the vortex "volume"  r03
+weighted by the vorticity flux  /r02, giving the source strength a clear physical dimension
+and scale. In the electrostatic Coulomb law (Sec. 8) only the ratio Q/(40) = r0/(4)
+
+enters, so the Coulomb field is independent of the normalisation convention for Q when  is
+
+fixed.
+
+                                          12
+5.3 Quantisation of circulation
+
+In superfluid systems the circulation is quantised [20, 21, 23]:
+
+    h                                                             (30)
+    =n ,                                         n  Z,
+            mp
+
+where mp is the particle mass and h Planck's constant. This provides the natural discreteness
+of Q, mirroring the quantisation of electric charge. In this context the condition  = r0
+connects the charge quantum to the healing length of the condensate [24, 25].
+
+5.4 Localised charge density
+
+To represent Q as a volume integral, introduce the surface delta distribution S on a spanning
+surface S of T (with S = C):
+
+    (r)  0 r0 (r) · n(r) S(r).                                    (31)
+
+Integrating over all space and applying Stokes' theorem gives
+
+     dV = 0 r0  · n dS = 0 r0  = Q,                               (32)
+
+R3  S
+
+using definition (28). The localised density (r) and the global invariant Q are therefore
+consistent:  is the source density whose volume integral recovers the circulation invariant.
+Localisation to the core follows from the -split: in the exterior,   0 and   0.
+
+6 Formal Correspondence with Maxwell's Equations
+
+In the exterior region we use the potentials (18) and the field definitions (19). Sources are
+localised by the -split (Sec. 3.3). The four equations are established in the order (II), (III),
+(IV), (I): the first two follow as pure potential identities; (IV) uses the K­V wave closure
+(23); and (I) follows from the Coulomb gauge condition (26) and the Poisson equation (25)
+for the scalar potential.
+
+6.1 (II) Gauss law for magnetism
+
+     · B =  · ( × A) = 0.                                         (II)
+
+This is a vector identity and holds everywhere.
+
+6.2 (III) Faraday's induction law
+
+ × E = - ×  - t( × A) = -tB.                                      (III)
+
+This is also an identity of the potential formalism.
+
+                                 13
+6.3 (IV) Amp`ere­Maxwell law
+
+In Coulomb gauge (26), the vector identity  × ( × A) = ( · A) - 2A simplifies to
+
+                           c2 × B = -c22A.                      (33)
+
+Dividing the K­V momentum equation (11) by 0 and multiplying by R (so that A = Ru,
+
+ = Rp/0):
+
+                   ttA + t = c22A + 2tA,                        (34)
+
+hence
+
+                   -c22A = -ttA - t + 2tA.                      (35)
+
+Using tE = -t - ttA (time-derivative of E = - - tA), the t and -ttA terms
+
+combine to tE:
+
+                           c2 × B = tE + 2tA.                   (36)
+
+Multiplying by 0 and identifying H  0c2B, D  0E, and j  0 2tA:
+
+            × H = tD + j,  H  0c2B, D  0E, j  0 2tA.            (IV)
+
+The identifications 0 = 0 and µµ0 = (0c2)-1 (Sec. 7) give D = 0E and H = B/(µµ0),
+consistent with the standard Amp`ere­Maxwell form  × H = tD + j. The effective current
+j = 02tA has a direct mechanical origin: it represents the viscous relaxation of elastic
+energy in the solenoidal sector of the K­V medium. It is proportional to  (equivalently
+R = /c2) and vanishes in the ideal limit   0, consistent with the conservative (source-free)
+Maxwell structure for an inviscid medium. In the exterior where   0, the current is O() 
+0 (Appendix B), so the electromagnetic sources are localised near the core as required. In
+exact analogy with the boundary-layer decomposition of classical vortex theory [4], viscosity
+governs only the core region; in the far field (  0) the viscous current vanishes and the
+source-free vacuum form  × H = tD is recovered exactly.
+
+6.4 (I) Gauss law
+
+Take the divergence of D = 0E = -0 - 0tA and apply the Coulomb gauge (26):
+
+                 · D = -02 - 0 t( · A) = -02.                   (37)
+
+The Poisson equation (25) then gives directly:
+
+                            · D = -02 = .                                   (I)
+
+Localisation: in the source-free exterior 2 = 0, so   0 away from the core;  is
+supported near the core boundary where  = 0 via the -split.
+
+                           14
+7 Physical Interpretation of Constants and Fields
+
+7.1 The conversion constant R = KV
+
+The constant R = /c2 = 0/G = KV is the Kelvin­Voigt mechanical relaxation time of the
+exterior vortex-ring medium. Its physical meaning:
+
+    · KV is the time for viscous stress to dissipate an elastic deformation of the medium.
+
+    · The regime  = R/(L/c)  1 means the medium relaxes many times before the wave
+       crosses the observation scale: the medium is wave-dominated and the electromagnetic
+       analogy is accurate.
+
+    · R is not a fitting parameter. For a known fluid viscosity  and measured wave speed c,
+       it follows as R = /c2; or equivalently from the elastic modulus G = 0c2 and viscosity
+       0 = 0.
+
+7.2 Dimensional consistency
+
+With R = /c2 ([R] = s), the fields carry the following dimensions:
+
+[] = m2 s-1, [A] = m, [E] = m s-1, [B] = 1 (dimensionless), [H] = kg m-1 s-2.
+
+                                                                                                                 (38)
+Consequently [cB] = m s-1 = [E], as in SI electrodynamics. The effective permittivity and
+
+permeability are
+
+                                                                 1                                   (39)
+                                   0 = 0,           µµ0 = 0c2 ,
+
+and  the  electromagnetic  energy  density    wEM   =   1   0|E|2   +  1  0c2|B|2  has   dimensions  J m-3,
+                                                        2              2
+                                                 1  u2
+consistent  with  the  kinetic  energy  density  2      of  the  underlying      fluid.
+
+7.3 Energy flux: Poynting vector analogue
+
+The electromagnetic Poynting vector S = E × B/(µµ0) has the hydrodynamic analogue
+
+            Shydro  =  E×B      =  0c2  E  ×  B  =  -0c2R2          p     +  tu  × ( × u) .          (40)
+                        µµ0                                         0
+
+Physically, Shydro is the rate at which mechanical energy is transported per unit area through
+the exterior medium by coupled pressure and vorticity perturbations. The conservation
+identity twEM +  · Shydro = 0 holds in the inviscid exterior (  0, i.e.   0), confirming
+the conservative character of the far-field.
+
+7.4 Complete correspondence table
+
+                                                    15
+             Table 1: Electromagnetic­hydrodynamic correspon-
+             dence. All hydrodynamic expressions use R = /c2 =
+
+             KV and c = G/0.
+
+EM quantity           Hydrodynamic analogue SI unit          Model unit
+
+Scalar potential      R p/0                       V          m2 s-1
+Vector potential A    Ru                          V·s·m-1    m
+Electric field E      -R(p/0 + tu)                V·m-1      m s-1
+Magnetic induction    R×u                         T          1
+B
+Magnetic intensity H  0c2B = 0  × u               A·m-1      kg m-1 s-2
+Permittivity 0                                    F·m-1      kg m-3
+Permeability µµ0      0                           H·m-1      m s2 kg-1
+Current density j                                 A·m-2      kg m-2 s-2
+Charge density        (0c2)-1                     C·m-3      kg m-3 s-1
+EM energy density w                               J·m-3      J m-3
+Charge Q              0 2tA                       C          kg s-1
+Current I                                         A          kg s-2
+                      -02
+                                                             kg m-1 s-2
+                      1  0|E|2  +  1  0  c2|B|2              s
+                      2            2                         m s-1
+
+                      0 r0 
+
+                      dQ/dt
+
+Shear modulus         G                           --
+Relaxation time R     KV = 0/G                    s
+Wave speed c                                      m s-1
+                         G/0
+
+8 Stationary Limit and Coulomb Law
+
+8.1 Electrostatic reduction
+
+In the strictly stationary regime (t = 0, u = 0, j = 0):
+
+                            E = -, B =  × A.                             (41)
+
+Gauss law (I) reduces to Poisson's equation:
+
+                                      -02 = .                            (42)
+
+8.2 Total charge and flux representation
+
+Integrating (42) over a volume V enclosing the source and applying the divergence theorem:
+
+                      Q =  dV = 0E · dS = 0 E · dS.                      (43)
+
+                         V               V                V
+
+The total charge equals the flux of 0E through a closed surface, exactly as in electrostatics
+with Q = 0 r0 .
+
+                                              16
+8.3 Point-source solution and 1/r field
+
+For r  r0, the compact source is equivalent to a point charge  = Q (3)(r), and (42) gives
+
+        Q1                               Q ^r
+(r) =         ,        E(r) = 40 r2 .                               (44)
+        40 r
+
+8.4 Force between two stationary vortex charges
+
+The force on a second core of charge Q2 at distance r12 from Q1 is
+
+F12     Q1Q2  ^r12  ,                       1
+     =  40    r122     khydro            =        .                 (45)
+                                            40
+
+The interaction is repulsive for equal-sign circulations and attractive for opposite circulations,
+directly mirroring the electromagnetic Coulomb law.
+
+9 Limitations and Scope
+
+The model is valid under the regime conditions (14). It demonstrates a controlled hydrody-
+namic analogy, not a proof that electromagnetism is mechanical. Key limitations:
+
+    · Elastic modulus: pressure-jump approximation. The shape-mode result Gshape =
+       272/(175r02) (Appendix F, eq. (3)) uses the background Bernoulli fields only (frozen-
+       flow approximation), ignoring the kinetic energy of the perturbed stream function (1).
+       The full first-principles calculation would add a positive correction, so (3) is a lower
+       bound on Gshape.
+
+    · Linearity. The exterior equations are linearised. Nonlinear effects (vortex reconnec-
+       tion, turbulence) may destabilise the circulation invariant Q.
+
+    · Charge discretisation. The quantisation of Q requires either quantised circulation
+       (superfluid regime) or a separate microphysical mechanism.
+
+    · Relativistic regime. The analogy does not address Lorentz covariance or relativistic
+       corrections.
+
+10 Possible Experimental Tests
+
+The model predicts testable phenomena in quantum fluids and classical vortex systems:
+
+   1. Coulomb-type vortex interaction. Measure the force between two compact cores
+       as a function of r12 and circulations 1, 2. The model predicts F  12/r122 with
+       sign reversal under circulation inversion.
+
+   2. Hyperbolic vs. diffusive transport. Impulsively excite a compact core and measure
+       the arrival time of the perturbation at distance L. Navier­Stokes diffusion gives t 
+       L2/; the K­V model predicts a finite-speed front at t  L/c.
+
+                                                         17
+   3. Viscosity scaling of the effective current. In an oscillatory vortex configuration,
+       vary  at fixed c and measure the far-field amplitude. The model predicts |j|   =
+       /(cL).
+
+   4. Far-field energy decay. Reconstruct E and B from measured p and u. For a
+       stationary compact source, verify |E|  r-2 and w  r-4.
+
+   5. Tests in quantum fluids. BEC and superfluid 4He offer well-defined vortex cores
+       with quantised  [23, 24], making them ideal systems for testing the charge-circulation
+       correspondence and for measuring the K­V wave speed c = G/  cBogoliubov [26].
+       Recent direct imaging of quantised vortex cores [28, 27] provides the experimental
+       infrastructure needed for such measurements.
+
+11 Conclusion
+
+We have shown that Maxwell's equations of electrodynamics follow formally from the me-
+chanics of compact vortex structures in a Kelvin­Voigt viscoelastic medium, under the as-
+sumptions of weak viscosity, small exterior perturbations, and wave-dominated propagation
+(  1).
+
+    The conceptual chain is:
+
+   1. A compact vortex core maintains its shape via pressure balance, generating an elastic
+       restoring force with shear modulus G  2/r02.
+
+   2. The exterior medium of dilute vortex rings behaves as a K­V solid with wave speed
+       c = G/ and relaxation time R = KV = 0/G.
+
+   3. The K­V constitutive law gives, exactly, the damped shear-wave equation for the vector
+       potential (23).
+
+   4. Incompressibility gives the Coulomb gauge condition (26) without additional assump-
+       tions.
+
+   5. Maxwell's four equations follow: (II) and (III) are potential identities; (IV) uses the
+       K­V wave closure; (I) uses the Coulomb gauge and the Poisson equation for the scalar
+       potential.
+
+   6. Electric charge is the circulation invariant Q = 0r0, conserved by Kelvin's theorem.
+       The Coulomb law follows in the stationary limit.
+
+    All mapped quantities have concrete mechanical interpretations. In particular, R = KV
+is a directly measurable property of the medium, not a fitting parameter.
+
+Value in current form. The framework provides: (i) a mechanically self-consistent formal
+analogy useful for heuristics, pedagogy, and intuition-building; (ii) concrete experimental
+predictions for vortex interactions in superfluid systems (BEC, liquid helium); (iii) a bridge
+between vortex dynamics and electromagnetic field theory that may guide new hypotheses
+about wave-supporting media.
+
+                                                         18
+Future extensions. Priorities for future work: an exact (beyond pressure-jump) compu-
+
+tation of the Hill-vortex shape-mode prefactor in G (Appendix F provides a lower bound
+Gshape  272/(175r02)); extension to time-dependent moving-core configurations; possible
+Lorentz-covariant generalisation; and experimental tests in BEC and superfluid helium.
+
+Appendices
+
+This appendix collects auxiliary derivations and comparisons referenced in the main text.
+
+A Kelvin­Voigt vs. Maxwell viscoelastic closures
+
+Section 4.3 derives the damped shear-wave equation (22) from the K­V constitutive law (7).
+Here we compare this with the Maxwell viscoelastic model and discuss limits.
+
+Why not the Maxwell model? The Maxwell constitutive relation,
+
+ + M t = 0 D(u),                                                                (46)
+
+with M = 0/G, leads to the telegrapher's equation for the solenoidal velocity:
+
+ttusol  +   1  tusol  =     2usol.                                              (47)
+           M             M
+
+This has global (homogeneous) damping M-1tu, whereas the K­V equation (22) has spatial
+(Laplacian) damping 2tu. The solenoidal constraint  · usol = 0 is preserved by both
+models (as the divergence of each equation vanishes when  · u = 0). Furthermore, (47)
+does not factor into a wave operator plus a small viscous perturbation when   1, so it
+does not admit a clean potential-theory interpretation.
+
+Limits of the K­V closure.
+
+    · Pure elastic (0  0): (22) reduces to ttusol = c22usol, consistent with Hill's kine-
+       matics and the Bogoliubov phonon branch.
+
+    · Pure viscous (G  0, c  0): (20) degenerates and the velocity equation reduces to
+       vorticity diffusion t = 2, recovering standard NS.
+
+    · Wave-dominated regime (  1, i.e. KV  L/c): wave propagation dominates and
+       the EM analogy holds to O().
+
+Generalised linear viscoelastic model. The Jeffreys model (1+1t) = 0(1+2t)D
+interpolates between Maxwell (2 = 0) and K­V (1 = 0). In the limit 1  KV the
+solenoidal equation reduces to (22), confirming robustness of the K­V closure.
+
+               19
+B Order-of-magnitude estimate of the effective current
+
+The effective current density from (IV) is j = 02tA. Let L be the exterior length scale
+and T  L/c the propagation time. For a vector potential of amplitude A:
+
+            |tA|          cA        |2A|      A             Ac           cA
+                             ,                L2 ,       |j|  0  L2 L = 0 L3 .
+                          L
+
+With A = Ru and R = /c2, so A  (/c2)U :
+
+                          |j|   0 2 U  = 0      U   ,                                    (48)
+                                 c L3           L2        =  1.
+
+                                                              cL
+
+The displacement current scales as |tD| = 0|tE|  0U/L2, so |j|/|tD|    1. The
+effective current is O() relative to the displacement current and vanishes in the ideal limit
+  0.
+
+C Derivation of the Lorentz-like force structure
+
+Apply  the  Lamb  vector  identity  (u · )u  =  1  u2  -u×  (with     =   × u)  to  the  exterior
+                                                2
+Euler equation 0(tu + (u · )u) = -p:
+
+                                0 tu +    p +   1   0u2  = 0 u × .                       (49)
+                                                2
+
+The right-hand side 0u× is the Lamb force density; it arises purely from the reorganisation
+of the advective term and is not circular. Comparing with the Lorentz force density f =
+(E + u × B) gives:
+
+                  B = R  = R  × u,            E = -R     tu +   p u2     .
+                                                                   +                     (50)
+                                                                0 2
+
+In the linearised exterior (|u|  c), (u2/2) is second order and absorbed into the scalar
+potential at leading order:
+
+                          E  -R           p  +  tu       = - - tA,                       (51)
+                                    
+                                      0
+
+consistently with the definitions in Sec. 4.
+
+D Incompressible K­V equations and Poisson equation
+      for 
+
+In the incompressible exterior ( · u = 0), the pressure p is a Lagrange multiplier enforcing
+the constraint. Start from the full second-order K­V momentum equation (11):
+
+                              0 ttu = -tp + G2u + 02tu.                                  (52)
+
+                                                20
+Taking the divergence and using  · u = 0:
+
+                    0 = -t 2p ,                                         (53)
+
+so 2p is time-independent. With initial rest conditions (p = 0 at t = 0) and far-field decay
+
+this gives 2p = 0, hence  = Rp/0 is harmonic in the source-free exterior.
+    Multiplying (52) by R/0 (with  = Rp/0, A = Ru, c2 = G/0,  = 0/0):
+
+ttA + t = c22A + 2tA.                                                   (54)
+
+Taking the curl of both sides and using  × f = 0:
+
+ttB = c22B + 2tB, B   × A.                                              (55)
+
+Since  · A = 0 the identity 2A = - × B holds, and the solenoidal potential A satisfies
+the same equation, consistently with (23):
+
+ttA - c22A = 2tA.                                                       (56)
+
+Near the core the -split produces source terms; Gauss's law then gives
+
+                    -02 = ,                                             (57)
+
+which reduces to 2 = 0 away from the core. The Coulomb gauge  · A = R · u = 0
+holds identically throughout the exterior.
+
+Comparison with the compressible case. In the barotropic (compressible) formulation,
+the continuity equation t + 0 · u = 0 together with p = c2 yields the Lorenz condition
+ · A + (1/c2)t = 0 and a scalar-potential wave equation tt - c22 = 2t. The
+two formulations are related by a gauge transformation and predict identical electromagnetic
+
+fields E, B.
+
+E Core­exterior decomposition via indicator function
+
+Introduce a smooth cutoff (r)  [0, 1] with   1 in the core 0 and   0 in the exterior
+R3 \ 0. Split the fields:
+
+p = pext +  pcore,  u = uext +  ucore,                = 0 + .           (58)
+
+Derivatives acting on  produce core-boundary terms:
+
+(f ) = f + f , 2(f ) = 2f + 2 · f + f 2.                                (59)
+
+All source densities (, j) are therefore supported near the core boundary ( = 0) and
+vanish in the far exterior where   0 and   0.
+
+                                           21
+F Hill-vortex shape-mode shear modulus
+
+We derive Gshape via the pressure-jump method : the radial pressure gradient jump across the
+unperturbed Hill-vortex boundary, obtained directly from Bernoulli's equation on each side,
+determines the restoring pressure on the deformed surface without solving any PDE for the
+perturbed stream function.
+
+Background velocities at the boundary. In the co-moving frame the tangential velocity
+is continuous across r = r0:
+
+                                           u   r0    =  3U   sin     (both sides),                                                    (60)
+                                                         2
+
+but its radial derivative differs:
+
+                            uin             6U                       uout                3U                                           (61)
+                                       = + sin ,                                    = - sin .
+                                r r0             r0                      r r0          2r0
+
+Both   follow    from   differentiating       the    interior    stream     function      0in   =    3U    r2  (r02  -  r2) sin2      and
+                                                                                                     4r02
+                                                     U             r2) sin2
+the   exterior   stream  function      0out    =     2  (r03/r  -            .
+
+Pressure gradients.             The    Bernoulli        integrals    are    pin  +  1  |u|2  =    k0in     +      Cin  (interior,     with
+                                                                                    2
+      15U/2r02)                    1  |u|2
+k  =             and    pout +     2        =  Cout     (exterior).      Differentiating        with       respect      to  r  at  r  =  r0
+
+(where ur = 0):
+
+     pin      =  k 0in          -  u   uin                45U 2      sin2  -        9U 2  sin2            81U 2         sin2 ,        (62)
+     r               r                  r            =-                               r0             =-
+          r0                r0                   r0
+                                                            4r0                                             4r0
+
+   pout       =  -u     uout               9U 2      sin2 .                                                                           (63)
+    r                    r            =+
+          r0                    r0
+                                             4r0
+
+Restoring pressure at the deformed boundary. For a boundary displacement r =
+r0P2(cos ) (volume-conserving since P2 sin  d = 0), the first-order pressure imbalance
+at the perturbed surface is:
+
+                 p = r0P2(cos )                pin - pout                =    45U 2       P2(cos )         sin2   .                   (64)
+                                               r r                          -
+                                                                     r0
+                                                                                  2
+
+Where P2 > 0 (poles, boundary moved outward), p < 0 means exterior pressure exceeds
+interior, pushing the boundary back: restoring.
+
+Elastic energy. The work done against the restoring pressure to reach deformation :
+
+E (2)  =  -   1      p·r0P2 ·2r02          sin   d      =  45U 2r032           1                               18      U 2r03 2.      (65)
+              2  0                                               2                                              7
+                                                                               (1 - µ2)P22 dµ =
+
+                                                                             -1
+
+                                                                                       = 4/35
+
+The angular integral evaluates as                  1    P22  dµ  -   1   µ2P22   dµ    =  2    -  2  =     4   ,  where     the    second
+                                                   -1                -1                   5       7        35
+
+term   uses   µ2P2   =  12  P4  +  11  P2  +  2   P0    and  Legendre       orthogonality.
+                        35         21         15
+
+                                                                 22
+Shear modulus.  Setting       E (2)  =  1  Gshape2Vcore  with  Vcore  =  4  r03:
+                                        2                                3
+
+                                     Gshape  =  2E (2)   =  27 U 2.                              (66)
+                                                2Vcore      7
+
+In terms of the Hill-vortex circulation  =      r0          r  dr  d  =  5U r0:
+                                                0    0
+
+                                                       272                                       (67)
+                                           Gshape = 175 r02 .
+
+Comparison with Tkachenko. With GTk = 2/(4r02):
+
+          Gshape = 27/(175) = 108  1.94,                 G = GTk + Gshape         0.234 2     .  (68)
+
+          GTk   1/(4)                175                                              r02
+
+Validity. Equation (67) is a lower bound : the derivation uses the background Bernoulli
+
+pressure  only  (frozen-flow  approximation)    and  omits  the    positive  kinetic  energy     |u|2dV
+                                                                                              2
+
+of the adjusted flow. Energetic stability (Gshape > 0) is guaranteed because the continuity
+
+of |u|2 across the Hill-vortex boundary (eq. (60)) ensures the surface term in the second
+
+variation of kinetic energy vanishes identically.
+
+References
+
+ [1] M. J. M. Hill, "On a spherical vortex," Phil. Trans. R. Soc. London A 185, 213­245
+      (1894).
+
+ [2] H. Lamb, Hydrodynamics, 6th ed., Cambridge University Press, Cambridge, 1932.
+
+ [3] J. Norbury, "A family of steady vortex rings," J. Fluid Mech. 57, 417­431 (1973).
+
+ [4] P. G. Saffman, Vortex Dynamics, Cambridge University Press, Cambridge, 1992.
+ [5] H. Helmholtz, "U¨ ber Integrale der hydrodynamischen Gleichungen, welche den Wirbel-
+
+      bewegungen entsprechen," J. reine angew. Math. 55, 25­55 (1858).
+
+ [6] R. M. Christensen, Theory of Viscoelasticity: An Introduction, Academic Press, New
+      York, 1971.
+
+ [7] J. C. Maxwell, "On physical lines of force," Phil. Mag. 21, 161­175, 281­291, 338­348
+      (1861).
+
+ [8] O. Heaviside, Electrical Papers, Macmillan, London, 1892.
+
+ [9] W. Thomson (Lord Kelvin), "On vortex atoms," Phil. Mag. 34, 15­24 (1867).
+
+[10] A. Bokulich, "Maxwell, Helmholtz, and the unreasonable effectiveness of the method of
+      physical analogy," Stud. Hist. Philos. Sci. 50, 28­37 (2015).
+
+                                                         23
+[11] O. Darrigol, "Body­soul duality in nineteenth-century German electrodynamics:
+      Helmholtz and the concept of potential," Hist. Stud. Phys. Biol. Sci. 28, 207­261 (1998).
+
+[12] H. Marmanis, "Analogy between the Navier­Stokes equations and Maxwell's equations:
+      Application to turbulence," Phys. Fluids 10, 1428­1437 (1998).
+
+[13] T. Kambe, "A new formulation of equations of compressible fluids by analogy with
+      Maxwell's equations," Fluid Dyn. Res. 42, 055502 (2010).
+
+[14] S. Panakkal, R. Parameswaran, and M. Vedan, "A geometric algebraic approach to fluid
+      dynamics," Phys. Fluids 32, 056604 (2020).
+
+[15] H. K. Moffatt, "Magnetostatic equilibria and analogous Euler flows of arbitrarily com-
+      plex topology. Part 1. Fundamentals," J. Fluid Mech. 159, 359­378 (1985).
+
+[16] K. Hu, "The analogy between electromagnetics and hydrodynamics," arXiv:2207.12902
+      (2022).
+
+[17] J. Ho, H. Kim et al., "Electromagnetism from relativistic fluid dynamics,"
+      arXiv:2502.10445 (2025).
+
+[18] V. K. Tkachenko, "On vortex lattices," Sov. Phys. JETP 22, 1282­1286 (1966).
+
+[19] G. Baym, "Tkachenko modes of vortex lattices in rapidly rotating Bose­Einstein con-
+      densates," Phys. Rev. Lett. 91, 110402 (2003).
+
+[20] L. Onsager, "Statistical hydrodynamics," Nuovo Cimento Suppl. 6, 279­287 (1949).
+
+[21] R. P. Feynman, "Application of quantum mechanics to liquid helium," Prog. Low Temp.
+      Phys. 1, 17­53 (1955).
+
+[22] N. N. Bogoliubov, "On the theory of superfluidity," J. Phys. USSR 11, 23­32 (1947).
+
+[23] R. J. Donnelly, Quantized Vortices in Helium II, Cambridge University Press, Cam-
+      bridge, 1991.
+
+[24] L. Pitaevskii and S. Stringari, Bose­Einstein Condensation, Oxford University Press,
+      Oxford, 2003.
+
+[25] C. J. Pethick and H. Smith, Bose­Einstein Condensation in Dilute Gases, Cambridge
+      University Press, Cambridge, 2002.
+
+[26] A. L. Fetter, "Rotating trapped Bose­Einstein condensates," Rev. Mod. Phys. 81, 647­
+      691 (2009).
+
+[27] G. Gauthier et al., "Giant vortex rings and expansion in oblate Bose­Einstein conden-
+      sates," Phys. Rev. X 12, 011031 (2022).
+
+[28] G. P. Bewley, D. P. Lathrop, and K. R. Sreenivasan, "Superfluid helium: visualization
+      of quantized vortices," Nature 441, 588 (2006).
+
+                                                         24
+

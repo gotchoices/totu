@@ -1,0 +1,49 @@
+========================================================================
+R61 Task B — candidate characteristic lengths
+========================================================================
+
+Proton reduced Compton λ̄_p = 0.2103 fm
+Pion±  reduced Compton λ̄_π  = 1.4138 fm
+Pion0  reduced Compton λ̄_π0 = 1.4619 fm
+α = 1/137.036;  α^(-1/3) = 5.1556
+
+-- Candidate 1 & 2: K-V viscous/relaxation length ξ = ν₀/c --
+  Requires material input ν₀ (= η₀/ρ₀); equivalent to fixing m_vac.
+  Out of scope for this ticket (see tickets/implement/3-losinets-mvac-identifications).
+  Target to match: ξ = 1.3 fm  ⇒  ν₀ = c · 1.3 fm = 3.897e-07 m²/s
+  (for comparison: liquid helium-II ν ≈ 2e-8 m²/s; atmosphere ν ≈ 1.5e-5 m²/s)
+
+-- Candidate 3: Hill-exterior decay --
+  No intrinsic length.  1/r⁶ kinetic energy density.
+  Characteristic scale must be set by threshold (Task C).
+
+-- Candidate 4: Pion reduced Compton wavelength --
+  λ̄_π±  = 1.4138 fm    (vs 1.30 fm → miss +8.8%)
+  λ̄_π0  = 1.4619 fm    (vs 1.30 fm → miss +12.5%)
+  Brings an extra particle scale into a model that purports to derive
+  nucleon structure from one vortex.  Accept only if an independent
+  mechanism couples the pion field to the K-V mantle.
+
+-- Candidate 5: α-derived expansion of a core scale --
+  α^(-1/3)                         = 5.1556
+  α^(-1/3) · λ̄_p                   = 1.0843 fm
+  α^(-1/3) · r_core [0.25 fm (Losinets)] = 1.2889 fm    (vs 1.30 fm → miss -0.9%)
+  α^(-1/3) · r_core [0.40 fm (MaSt/R60)] = 2.0622 fm    (vs 1.30 fm → miss +58.6%)
+  The α^(-1/3) ratio ≈ 5.157 is strikingly close to Losinets's
+  empirical r_m/r_c ≈ 5.2 (±1.2).  With r_core = 0.25 fm this lands
+  at 1.289 fm — parameter-free, within 1% of the Hofstadter mantle.
+  This is NOT derived from Losinets's linearised K-V framework; it
+  is a numerical coincidence worth flagging.  A mechanism would need
+  to connect the K-V wake extent to the dimensionless EM coupling α.
+
+-- Summary table (no free parameters) --
+  candidate                                  r_mantle (fm)   % off 1.3
+  ----------------------------------------  --------------  ----------
+  λ̄_π± (charged pion Compton)                      1.4138       +8.8%  ✓
+  λ̄_π0 (neutral pion Compton)                      1.4619      +12.5%  ✓
+  α^(-1/3)·r_core  [r_core = 0.25 fm]               1.2889       -0.9%  ✓
+  α^(-1/3)·r_core  [r_core = 0.40 fm]               2.0622      +58.6%
+  α^(-1/3)·λ̄_p                                     1.0843      -16.6%  ✓
+  5.2 · λ̄_p (Losinets ratio × MaSt λ̄_p)           1.0936      -15.9%  ✓
+
+✓ = within 20%  (ticket pass threshold for Task B).
