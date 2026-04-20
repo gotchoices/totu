@@ -317,7 +317,7 @@ A = R·u, but cancels from the dimensionless coupling.
 A conditional bridge α ∝ r₀² / (ρ₀·R⁶·c⁷) emerges *if* the
 Losinets ring-energy closure (m_vac in terms of c, G, ν₀) is
 ever solved, but introduces r₀ as a second knob.  See
-[`alpha-vs-R.md`](alpha-vs-R.md) for the full derivation,
+[`losinets/alpha-vs-R.md`](alpha-vs-R.md) for the full derivation,
 dimensional audits, and a corrected Planck-scale estimate
 R ≈ t_P (the trilogy's earlier "≈ 1.5 × 10⁻¹²⁶ s" guess was
 a unit-mixing error).

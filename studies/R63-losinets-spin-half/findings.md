@@ -289,9 +289,9 @@ verdict on it.
 
 - Script: `compute_L.py` (Phase A arithmetic; stdlib only).
 - Inputs: `models/model-E.md` (particle inventory); `papers/white-paper.md`
-  §4 (spin topological rule); `reference/losinets_baryon.txt` §2.2
+  §4 (spin topological rule); `losinets/losinets_baryon.txt` §2.2
   (L = ρ₀ Γ r₀² and open-problem statement).
 - Companion: `R62-losinets-mvac/findings.md` (m_vac open problem);
   the two §2.4 and §2.2 closures are structurally linked.
-- Trilogy integration: `reference/losinets-trilogy.md` §T3.
+- Trilogy integration: `losinets/losinets-trilogy.md` §T3.
 - Ticket: `tickets/implement/3-losinets-spin-half-mechanism.md`.

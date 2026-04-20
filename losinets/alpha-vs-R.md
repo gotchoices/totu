@@ -23,7 +23,7 @@ only if* Losinets's open ring-energy closure (photon §2.4) is solved.
 That is laid out in §4 below as a contingent result, not a derivation.
 
 This document supersedes the speculative §C4 ("α from R") of
-[`reference/losinets-trilogy.md`](../reference/losinets-trilogy.md).
+[`losinets/losinets-trilogy.md`](../losinets/losinets-trilogy.md).
 
 ---
 
@@ -266,7 +266,7 @@ the C1′ baryon thread, not the C4 substrate thread.
 ## 6. Where this leaves the layer map
 
 The trilogy's "single dial" framing in
-[`reference/losinets-trilogy.md`](../reference/losinets-trilogy.md)
+[`losinets/losinets-trilogy.md`](../losinets/losinets-trilogy.md)
 must be weakened, but not abandoned:
 
 - Each framework still has **exactly one EM input** of its own kind:
@@ -314,7 +314,7 @@ disagreement with this prediction.
 
 - [`grid/foundations.md`](foundations.md) §"Open questions" — Q2 and the
   new sibling Q2b (α ↔ R).
-- [`reference/losinets-trilogy.md`](../reference/losinets-trilogy.md)
+- [`losinets/losinets-trilogy.md`](../losinets/losinets-trilogy.md)
   §C4 — replaced placeholder with the result derived here.
 - [`primers/alpha-in-grid.md`](../primers/alpha-in-grid.md) §6 — pointer
   to this derivation as the Losinets-side attempt at α.

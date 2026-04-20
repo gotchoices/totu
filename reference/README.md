@@ -9,7 +9,6 @@ Source material by others, and recorded conversations that have informed the pro
 - `gemini-tensors-compton-toroid.md` — Gemini conversation exploring tensors, the Compton wavelength, toroidal electron models, and a proposed "Harmonic Toroidal Fractal Theory."
 - `claude-photon-knots-particle-structure.md` — Claude conversation starting from single-photon emitters and dipole radiation, ending with a substantive discussion of the refined WvM model: photon knots for electron/proton/neutron (no quarks), the 1/137 fine-structure-constant connection, and suggestions for next steps.
 - `claude-epsilon-mu-alpha.md` — Claude conversation building ε₀ and μ₀ from first principles, through Maxwell's equations in natural units, the derivation and running of the fine structure constant α, coupling constant unification at the GUT scale, and the renormalization group perspective on "which α is fundamental."
-- `losinets-trilogy.md` — Summary of three Losinets papers (Maxwell-from-dynamics, free-photon vortex ring, baryon vortex assemblies) and how they map onto MaSt and GRID as three layers of one architecture. Source PDFs also live in this folder.
 
 ## Notes
 

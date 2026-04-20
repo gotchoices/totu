@@ -126,7 +126,7 @@ Losinets reads the failure ladder as diagnostic: each unit of strangeness introd
 | **Charge mechanism** | Topological phase winding on the lattice; e = √(4πα) | Circulation invariant Q = ρ₀·r₀·Γ (K–V units); SI via R | Tube-winding integer, Q = −n₁ + n₅ from Ma–S coupling sign |
 | **Single dial** | α (dimensionless) | R = τ_KV = η₀/G = ν₀/c² (time) | α (dimensionless, inherited from GRID) |
 
-(The three single dials sit on **orthogonal axes** of the joint K–V parameter space — α is fixed by (ρ₀, r₀, m_vac), R is the viscoelastic relaxation time, and they do not reduce to each other unless Losinets's photon §2.4 ring-energy closure is solved. See C4 below and [`grid/alpha-vs-R.md`](../grid/alpha-vs-R.md).)
+(The three single dials sit on **orthogonal axes** of the joint K–V parameter space — α is fixed by (ρ₀, r₀, m_vac), R is the viscoelastic relaxation time, and they do not reduce to each other unless Losinets's photon §2.4 ring-energy closure is solved. See C4 below and [`losinets/alpha-vs-R.md`](../losinets/alpha-vs-R.md).)
 
 The three frameworks are **not** competitors but cover different slices of a single architecture. They agree strongly on concepts (charge from winding, photon as ring-like, Coulomb gauge as a consequence not an assumption), and disagree or fail to connect on substrate microstructure, free-photon internal structure, and spin sector. Both the agreements and the disagreements are structural, not cosmetic.
 
@@ -140,7 +140,7 @@ The three frameworks are **not** competitors but cover different slices of a sin
 
 **3. Mass = confined-photon frequency.** MaSt's white-paper argument *m = hf/c² for the confined-photon circulation frequency* is stated verbally. Losinets's eq. 15, E_n = n·ℏω from Γ_n = n·h/m_vac, **derives** the same relation from a specific mechanical model — modulo the interpretation of what "n" and "ω" are. MaSt's mass formula is the statement that a confined photon's energy is its eigenfrequency; Losinets's E_n = n·ℏω is the statement that a ring of fixed ρ supports a ladder of circulation quanta. These are related but not identical statements, and conflating them obscures the difference.
 
-**4. One dial per framework, on orthogonal axes.** Each framework has exactly one free electromagnetic input: α (GRID, MaSt) or R = τ_KV (Losinets). R has units of time and is measurable in principle from the fluid properties; α is dimensionless. The hopeful "α = f(R · m_P·c²/ℏ)" form does not survive the algebra: substituting Losinets's K–V identifications into α = e²/(4πε₀ℏc) yields **α = π·ρ₀·r₀²·ℏ / (m_vac²·c)** and **R drops out**. The two dials are logically independent inputs to the K–V parameter space, not two names for the same number. A conditional bridge exists only if Losinets's photon §2.4 open problem (m_vac from the ring-energy closure) is solved. Full derivation, dimensional audits, and a corrected Planck-scale estimate R ≈ t_P (the trilogy's earlier μ₀/G_shear guess was a unit error) live in [`grid/alpha-vs-R.md`](../grid/alpha-vs-R.md). See also C4 below.
+**4. One dial per framework, on orthogonal axes.** Each framework has exactly one free electromagnetic input: α (GRID, MaSt) or R = τ_KV (Losinets). R has units of time and is measurable in principle from the fluid properties; α is dimensionless. The hopeful "α = f(R · m_P·c²/ℏ)" form does not survive the algebra: substituting Losinets's K–V identifications into α = e²/(4πε₀ℏc) yields **α = π·ρ₀·r₀²·ℏ / (m_vac²·c)** and **R drops out**. The two dials are logically independent inputs to the K–V parameter space, not two names for the same number. A conditional bridge exists only if Losinets's photon §2.4 open problem (m_vac from the ring-energy closure) is solved. Full derivation, dimensional audits, and a corrected Planck-scale estimate R ≈ t_P (the trilogy's earlier μ₀/G_shear guess was a unit error) live in [`losinets/alpha-vs-R.md`](../losinets/alpha-vs-R.md). See also C4 below.
 
 ---
 
@@ -224,7 +224,7 @@ These predictions are **analogies, not derivations**. Whether a MaSt confined mo
 
 ### C4. α from R — derived; α and R are orthogonal in K–V space
 
-**Status (2026-04): worked.** Full derivation in [`grid/alpha-vs-R.md`](../grid/alpha-vs-R.md).
+**Status (2026-04): worked.** Full derivation in [`losinets/alpha-vs-R.md`](../losinets/alpha-vs-R.md).
 
 The candidate bridge originally written here — α = R · (some Planck-scale frequency) — does not exist within Losinets's own correspondence table. Substituting the EfD §7.4 identifications **e ↔ Q = ρ₀·r₀·Γ**, **ε₀ ↔ ρ₀**, and the Onsager–Feynman quantisation **Γ = h/m_vac** into the SI definition α = e²/(4πε₀ℏc) gives the unconditional result
 

@@ -29,8 +29,8 @@ Targets (Losinets / Hofstadter 1960s electron-scattering data):
 ## References
 
 - Ticket: [`tickets/implement/4-losinets-hofstadter-projection.md`](../../tickets/implement/4-losinets-hofstadter-projection.md)
-- Losinets baryon paper: [`reference/losinets_baryon.pdf`](../../reference/losinets_baryon.pdf)
-- Trilogy notes §C1: [`reference/losinets-trilogy.md`](../../reference/losinets-trilogy.md)
+- Losinets baryon paper: [`losinets/losinets_baryon.pdf`](../../losinets/losinets_baryon.pdf)
+- Trilogy notes §C1: [`losinets/losinets-trilogy.md`](../../losinets/losinets-trilogy.md)
 - Model-E: [`models/model-E.md`](../../models/model-E.md)
 - Engine: [`studies/lib/ma_model_d.py`](../lib/ma_model_d.py)
 - Parent study (metric build): [`studies/R54-compound-modes`](../R54-compound-modes/)

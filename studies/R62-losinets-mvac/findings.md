@@ -145,7 +145,7 @@ Both remain open.
 
 - Script: `compute_mvac.py` (stdlib-only; prints the table and I-5 scan).
 - Inputs: `papers/white-paper.md` §3 (L-table); `models/model-E.md`
-  (particle inventory); `reference/losinets_photon.txt` §2.4
+  (particle inventory); `losinets/losinets_photon.txt` §2.4
   (Γ closure and open m_vac problem).
 - Companion studies: `R60-losinets-projection/` (Hofstadter projection);
   `R61-losinets-mantle-wake/` (K-V wake mantle).
